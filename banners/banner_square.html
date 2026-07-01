@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Lumière 正方形バナー 1080×1080</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{display:flex;justify-content:center;align-items:center;min-height:100vh;background:#e9e9ee;font-family:"Noto Sans JP",sans-serif}
+.banner{position:relative;width:1080px;height:1080px;overflow:hidden;background:#fbf7f2}
+/* 写真：右寄せ・顔を上の方に（肌の露出部分は下に逃がす） */
+.photo{position:absolute;top:0;right:0;width:72%;height:100%;background:url('img/model_jp.png') 32% 6%/cover}
+/* 肌と背景をなじませて隠すグラデ（左＋下を強めに） */
+.skinhide{position:absolute;inset:0;background:
+  linear-gradient(90deg,#fbf7f2 26%,rgba(251,247,242,.85) 40%,rgba(251,247,242,.12) 56%,rgba(251,247,242,0) 65%),
+  linear-gradient(0deg,#fbf7f2 2%,rgba(251,247,242,.96) 15%,rgba(251,247,242,.45) 31%,rgba(251,247,242,0) 47%)}
+.sp{position:absolute;color:#cdab6e;text-shadow:0 0 14px rgba(205,171,110,.55)}
+.sp1{top:150px;left:600px;font-size:30px}.sp2{top:250px;left:660px;font-size:18px}
+/* バッジ：左上の空きスペースへ */
+.badge{position:absolute;top:212px;left:84px;width:148px;height:148px;border-radius:50%;background:rgba(255,255,255,.92);border:2px solid #cdab6e;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 22px rgba(58,51,48,.14)}
+.badge .b1{font-size:17px;color:#9a7f54;font-weight:700}.badge .b2{font-family:"Noto Serif JP",serif;font-size:28px;color:#3a3330;font-weight:700;line-height:1.08;margin:2px 0}.badge .b3{font-size:13px;color:#8a7d6c}
+.content{position:absolute;inset:0;padding:96px 84px 96px;display:flex;flex-direction:column}
+.brand{font-family:"Noto Serif JP",serif;font-size:40px;color:#3a3330;letter-spacing:.12em}
+.brand small{display:block;font-family:"Noto Sans JP",sans-serif;font-size:14px;letter-spacing:.32em;color:#b89b6e;margin-top:5px}
+.eyebrow{margin-top:212px;font-size:24px;color:#8a7d6c;letter-spacing:.04em;position:relative;padding-top:18px}
+.eyebrow::before{content:"";position:absolute;left:0;top:0;width:50px;height:2px;background:#cdab6e}
+.catch{font-family:"Noto Serif JP",serif;font-weight:700;color:#3a3330;font-size:76px;line-height:1.3;margin-top:14px;letter-spacing:.01em;text-shadow:0 1px 16px rgba(251,247,242,.95)}
+.catch .hl{color:#c98b96;position:relative;white-space:nowrap}
+.catch .hl::after{content:"";position:absolute;left:0;bottom:6px;width:100%;height:14px;background:rgba(201,139,150,.22);z-index:-1}
+.sub{margin-top:20px;font-size:25px;color:#6b625c;line-height:1.7;text-shadow:0 1px 10px rgba(251,247,242,.85)}
+.spacer{flex:1}
+.price{display:flex;align-items:flex-end;gap:20px}
+.price .lead{font-size:22px;color:#9a7f54;font-weight:700;padding-bottom:12px;letter-spacing:.04em}
+.price .was{font-size:24px;color:#9b9089;text-decoration:line-through;padding-bottom:13px}
+.price .now{font-family:"Noto Serif JP",serif;font-weight:700;color:#c0566a;font-size:92px;line-height:.85}
+.price .now .y{font-size:44px}.price .now .t{font-size:18px;color:#6b625c}
+.cta{margin-top:30px;align-self:flex-start;background:linear-gradient(135deg,#d29aa3,#c0566a);color:#fff;font-size:32px;font-weight:700;padding:23px 54px;border-radius:54px;letter-spacing:.05em;box-shadow:0 14px 32px rgba(192,86,106,.34)}
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="photo"></div>
+  <div class="skinhide"></div>
+  <span class="sp sp1">✦</span><span class="sp sp2">✧</span>
+  <div class="badge"><div class="b1">完全個室</div><div class="b2">勧誘<br>なし</div><div class="b3">安心サロン</div></div>
+  <div class="content">
+    <div class="brand">Lumière<small>PRIVATE FACIAL SALON</small></div>
+    <div class="eyebrow">乾燥・くすみに、さよなら</div>
+    <div class="catch">素肌から、<br><span class="hl">透明感</span>のある私へ。</div>
+    <div class="sub">完全個室のオーダーメイド・フェイシャル。<br>あなたの肌だけのためのケアを。</div>
+    <div class="spacer"></div>
+    <div class="price">
+      <span class="lead">初回体験</span>
+      <span class="was">¥7,700</span>
+      <span class="now"><span class="y">¥</span>4,980<span class="t"> 税込/60分</span></span>
+    </div>
+    <div class="cta">ご予約はこちら ＞</div>
+  </div>
+</div>
+</body>
+</html>

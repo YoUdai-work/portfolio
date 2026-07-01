@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumière（ルミエール）｜大人のための隠れ家フェイシャルエステ</title>
+<meta name="description" content="完全個室・オーダーメイドのフェイシャルエステ。30代40代の乾燥・くすみ・疲れ肌へ。初回体験¥4,980。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --beige:#f4efe9; --beige-d:#e8ded2; --gold:#b89b6e; --gold-d:#9a7f54;
+  --pink:#d8b9b3; --ink:#3a3330; --ink-soft:#6b625c; --white:#fffdfb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--white);line-height:1.9;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:"Noto Serif JP",serif;font-weight:500;letter-spacing:.04em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.en{font-size:.72rem;letter-spacing:.3em;color:var(--gold);font-weight:500;text-transform:uppercase}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,253,251,.85);backdrop-filter:blur(8px);transition:.3s}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Noto Serif JP",serif;font-size:1.4rem;letter-spacing:.18em;color:var(--ink)}
+.logo small{display:block;font-size:.55rem;letter-spacing:.3em;color:var(--gold);text-align:center}
+.nav-links{display:flex;gap:32px;font-size:.85rem}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:#fff!important;padding:9px 20px;border-radius:30px;font-size:.8rem}
+@media(max-width:768px){.nav-links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(rgba(58,51,48,.32),rgba(58,51,48,.42)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80') center/cover;color:#fff}
+.hero-inner{max-width:1080px;margin:0 auto;padding:0 24px;width:100%}
+.hero .en{color:#f0e3d4}
+.hero h1{font-size:clamp(1.9rem,5vw,3.3rem);line-height:1.5;margin:18px 0 22px;text-shadow:0 2px 20px rgba(0,0,0,.25)}
+.hero p{font-size:1rem;max-width:520px;text-shadow:0 1px 10px rgba(0,0,0,.3)}
+.hero .btn{margin-top:34px}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:16px 40px;border-radius:40px;font-size:.95rem;letter-spacing:.08em;transition:.3s;box-shadow:0 8px 24px rgba(184,155,110,.35)}
+.btn:hover{background:var(--gold-d);transform:translateY(-2px)}
+.btn-line{background:#06c755;box-shadow:0 8px 24px rgba(6,199,85,.3)}
+
+/* section common */
+section{padding:90px 0}
+.sec-head{text-align:center;margin-bottom:54px}
+.sec-head h2{font-size:clamp(1.5rem,4vw,2.1rem);margin-top:10px}
+.fade{opacity:0;transform:translateY(28px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+.fade.in{opacity:1;transform:none}
+
+/* trouble */
+.trouble{background:var(--beige)}
+.trouble ul{max-width:620px;margin:0 auto;list-style:none}
+.trouble li{background:#fff;margin-bottom:14px;padding:18px 26px;border-radius:12px;font-size:1rem;position:relative;padding-left:54px;box-shadow:0 4px 16px rgba(58,51,48,.04)}
+.trouble li::before{content:"✓";position:absolute;left:22px;color:var(--gold);font-weight:700}
+.trouble .lead{text-align:center;margin-top:36px;font-size:1.1rem;color:var(--gold-d)}
+
+/* reasons */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.reason{text-align:center}
+.reason .num{font-family:"Noto Serif JP",serif;font-size:2.4rem;color:var(--pink)}
+.reason img{width:100%;height:200px;object-fit:cover;border-radius:14px;margin:14px 0 18px}
+.reason h3{font-size:1.15rem;margin-bottom:10px}
+.reason p{font-size:.9rem;color:var(--ink-soft)}
+@media(max-width:768px){.reasons{grid-template-columns:1fr}}
+
+/* menu */
+.menu{background:var(--beige)}
+.menu-list{max-width:680px;margin:0 auto}
+.menu-item{display:flex;justify-content:space-between;align-items:baseline;background:#fff;padding:22px 28px;border-radius:12px;margin-bottom:16px;box-shadow:0 4px 16px rgba(58,51,48,.04)}
+.menu-item .name{font-family:"Noto Serif JP",serif;font-size:1.1rem}
+.menu-item .desc{font-size:.82rem;color:var(--ink-soft);margin-top:4px}
+.menu-item .price{font-family:"Noto Serif JP",serif;font-size:1.25rem;color:var(--gold-d);white-space:nowrap;padding-left:18px}
+.menu-item .price small{font-size:.7rem;color:var(--ink-soft)}
+
+/* voice */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.voice{background:var(--beige);padding:28px;border-radius:14px}
+.voice .stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+.voice p{font-size:.9rem}
+.voice .who{margin-top:16px;font-size:.8rem;color:var(--ink-soft)}
+@media(max-width:768px){.voices{grid-template-columns:1fr}}
+
+/* flow */
+.flow{max-width:680px;margin:0 auto}
+.step{display:flex;gap:22px;margin-bottom:26px;align-items:flex-start}
+.step .n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif JP",serif}
+.step h3{font-size:1.05rem;margin-bottom:4px}
+.step p{font-size:.88rem;color:var(--ink-soft)}
+
+/* cta band */
+.cta-band{background:linear-gradient(rgba(154,127,84,.85),rgba(154,127,84,.9)),url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1400&q=80') center/cover;color:#fff;text-align:center}
+.cta-band h2{font-size:clamp(1.5rem,4vw,2.1rem);margin-bottom:14px}
+.cta-band p{margin-bottom:30px}
+.cta-band .btn{font-weight:700;box-shadow:0 10px 26px rgba(0,0,0,.22);margin:6px}
+.cta-band .btn-web{background:#fff;color:#8a6736}
+.cta-band .btn-web:hover{background:#fbf3e6;color:#6f5226;transform:translateY(-3px)}
+.cta-band .btn-line{background:#06c755;color:#fff}
+.cta-band .btn-line:hover{background:#05b34c;transform:translateY(-3px)}
+.cta-band .price-tag{font-family:"Noto Serif JP",serif;font-size:2rem;display:block;margin:10px 0}
+.cta-band .price-tag small{font-size:.9rem}
+
+/* faq */
+.faq-list{max-width:680px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--beige-d);padding:20px 0;cursor:pointer}
+.faq-q{display:flex;justify-content:space-between;font-weight:500;gap:16px}
+.faq-q span{color:var(--gold);transition:.3s}
+.faq-a{max-height:0;overflow:hidden;transition:.4s;color:var(--ink-soft);font-size:.9rem}
+.faq-item.open .faq-a{max-height:200px;margin-top:12px}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+
+/* info */
+.info{background:var(--beige);text-align:center}
+.info table{margin:0 auto;border-collapse:collapse;text-align:left;font-size:.9rem}
+.info td{padding:10px 16px;border-bottom:1px solid var(--beige-d)}
+.info td:first-child{color:var(--gold-d);font-weight:500;white-space:nowrap}
+
+footer{background:var(--ink);color:#cfc6bd;text-align:center;padding:50px 24px;font-size:.8rem}
+footer .logo{color:#fff;margin-bottom:12px}
+
+/* fixed mobile cta */
+.fixed-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;gap:1px;background:var(--beige-d)}
+.fixed-cta a{flex:1;text-align:center;padding:15px;color:#fff;font-size:.9rem;font-weight:500}
+.fixed-cta .tel{background:var(--gold-d)}
+.fixed-cta .resv{background:var(--gold)}
+@media(max-width:768px){.fixed-cta{display:flex}body{padding-bottom:54px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Lumière<small>FACIAL ESTHETIC</small></div>
+    <nav class="nav-links">
+      <a href="#reason">選ばれる理由</a>
+      <a href="#menu">メニュー</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#info">店舗情報</a>
+    </nav>
+    <a href="#reserve" class="nav-cta">初回体験を予約</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="en">Private Facial Salon</p>
+    <h1>「疲れ顔」から、<br>透明感のある私へ。</h1>
+    <p>30代・40代の乾燥とくすみに寄り添う、完全個室のオーダーメイドフェイシャル。あなたの肌だけのためのケアを。</p>
+    <a href="#reserve" class="btn">初回体験 ¥4,980 を予約する</a>
+  </div>
+</section>
+
+<section class="trouble fade">
+  <div class="wrap">
+    <div class="sec-head"><p class="en">Trouble</p><h2>こんなお悩み、<br>ありませんか？</h2></div>
+    <ul>
+      <li>鏡を見るたび、肌のくすみとハリのなさが気になる</li>
+      <li>スキンケアを変えても、乾燥がなかなか改善しない</li>
+      <li>仕事や育児で疲れ、自分をいたわる時間がない</li>
+      <li>エステに興味はあるけど、勧誘がこわくて踏み出せない</li>
+    </ul>
+    <p class="lead">Lumièreは、その一つひとつに丁寧にお応えします。</p>
+  </div>
+</section>
+
+<section id="reason" class="fade">
+  <div class="wrap">
+    <div class="sec-head"><p class="en">Reason</p><h2>Lumièreが選ばれる3つの理由</h2></div>
+    <div class="reasons">
+      <div class="reason">
+        <div class="num">01</div>
+        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80" alt="完全個室">
+        <h3>完全個室・マンツーマン</h3>
+        <p>人目を気にせずくつろげる完全個室。担当者が最初から最後まで一貫して施術します。</p>
+      </div>
+      <div class="reason">
+        <div class="num">02</div>
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80" alt="オーダーメイド">
+        <h3>肌診断×オーダーメイド</h3>
+        <p>その日の肌状態をカウンセリングし、季節や体調に合わせてケア内容を調整します。</p>
+      </div>
+      <div class="reason">
+        <div class="num">03</div>
+        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80" alt="無理な勧誘なし">
+        <h3>しつこい勧誘は一切なし</h3>
+        <p>必要なものだけをご提案。「また来たい」と思える心地よさだけを大切にしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="menu fade">
+  <div class="wrap">
+    <div class="sec-head"><p class="en">Menu</p><h2>メニュー・料金</h2></div>
+    <div class="menu-list">
+      <div class="menu-item">
+        <div><div class="name">初回体験フェイシャル</div><div class="desc">カウンセリング＋肌診断＋ベーシックケア（60分）</div></div>
+        <div class="price">¥4,980<small>／初回</small></div>
+      </div>
+      <div class="menu-item">
+        <div><div class="name">うるおい集中ケア</div><div class="desc">乾燥・くすみが気になる方へ（80分）</div></div>
+        <div class="price">¥9,800</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="name">リフトアップエイジングケア</div><div class="desc">ハリ・たるみにアプローチ（90分）</div></div>
+        <div class="price">¥12,800</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="name">プレミアム毛穴洗浄</div><div class="desc">毛穴の黒ずみ・ザラつきに（75分）</div></div>
+        <div class="price">¥10,800</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voice" class="fade">
+  <div class="wrap">
+    <div class="sec-head"><p class="en">Voice</p><h2>お客様の声</h2></div>
+    <div class="voices">
+      <div class="voice"><div class="stars">★★★★★</div><p>「施術後、肌のトーンが明るくなって驚きました。個室で完全にリラックスでき、月一のご褒美になっています。」</p><div class="who">38歳・会社員 K.M様</div></div>
+      <div class="voice"><div class="stars">★★★★★</div><p>「勧誘がないので安心して通えます。その日の肌に合わせて提案してくれるのが嬉しい。」</p><div class="who">42歳・主婦 Y.S様</div></div>
+      <div class="voice"><div class="stars">★★★★★</div><p>「初回体験のつもりが、丁寧さに感動して即決。乾燥肌が落ち着いてきました。」</p><div class="who">35歳・看護師 A.T様</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="flow fade" style="background:var(--beige)">
+  <div class="wrap">
+    <div class="sec-head"><p class="en">Flow</p><h2>初回体験の流れ</h2></div>
+    <div class="flow">
+      <div class="step"><div class="n serif">1</div><div><h3>ご予約</h3><p>WEBまたはLINEから希望日時をお選びください。24時間受付。</p></div></div>
+      <div class="step"><div class="n serif">2</div><div><h3>カウンセリング</h3><p>お悩みと肌状態を丁寧にヒアリング。無理な提案はいたしません。</p></div></div>
+      <div class="step"><div class="n serif">3</div><div><h3>施術</h3><p>あなたの肌に合わせたオーダーメイドケアを完全個室で。</p></div></div>
+      <div class="step"><div class="n serif">4</div><div><h3>アフターカウンセリング</h3><p>ホームケアのアドバイス。次回の無理なご予約はお取りしません。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reserve" class="cta-band fade">
+  <div class="wrap">
+    <p class="en" style="color:#fff">First Trial</p>
+    <h2>まずは初回体験から。</h2>
+    <span class="price-tag">¥4,980<small>（税込・60分）</small></span>
+    <p>通常¥7,700の初回体験を、はじめての方限定価格でご案内中。</p>
+    <a href="#" class="btn btn-web">WEBで予約する</a>
+    <a href="#" class="btn btn-line">💬 LINEで予約する</a>
+  </div>
+</section>
+
+<section class="fade">
+  <div class="wrap">
+    <div class="sec-head"><p class="en">FAQ</p><h2>よくあるご質問</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">初めてでも大丈夫ですか？<span>＋</span></div><div class="faq-a">はい。エステが初めての方も多くご来店されています。カウンセリングから丁寧にご説明しますのでご安心ください。</div></div>
+      <div class="faq-item"><div class="faq-q">勧誘はありませんか？<span>＋</span></div><div class="faq-a">しつこい勧誘は一切行っておりません。必要なケアだけをご提案します。</div></div>
+      <div class="faq-item"><div class="faq-q">予約はどうすればいいですか？<span>＋</span></div><div class="faq-a">WEBフォームまたはLINEから24時間受付しております。お電話でも承ります。</div></div>
+      <div class="faq-item"><div class="faq-q">支払い方法は？<span>＋</span></div><div class="faq-a">現金・各種クレジットカード・QRコード決済がご利用いただけます。</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="info" class="info fade">
+  <div class="wrap">
+    <div class="sec-head"><p class="en">Salon Info</p><h2>店舗情報・アクセス</h2></div>
+    <table>
+      <tr><td>店名</td><td>Lumière（ルミエール）</td></tr>
+      <tr><td>住所</td><td>※架空サロン（ポートフォリオ用デモ）</td></tr>
+      <tr><td>営業時間</td><td>10:00 - 20:00（最終受付19:00）</td></tr>
+      <tr><td>定休日</td><td>不定休</td></tr>
+      <tr><td>アクセス</td><td>最寄駅より徒歩5分</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="logo" style="font-family:'Noto Serif JP',serif;font-size:1.3rem;letter-spacing:.18em">Lumière</div>
+  <p>架空サロン｜ポートフォリオ制作デモ</p>
+  <p style="margin-top:8px;opacity:.6">&copy; 2026 Lumière Demo. Designed for portfolio.</p>
+</footer>
+
+<div class="fixed-cta">
+  <a href="#" class="tel">☎ 電話する</a>
+  <a href="#reserve" class="resv">初回体験を予約</a>
+</div>
+
+<script>
+// scroll fade-in
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+// faq accordion
+document.querySelectorAll('.faq-item').forEach(it=>it.addEventListener('click',()=>it.classList.toggle('open')));
+// header shadow on scroll
+addEventListener('scroll',()=>{document.querySelector('header').style.boxShadow=scrollY>20?'0 2px 20px rgba(58,51,48,.06)':'none'});
+</script>
+</body>
+</html>

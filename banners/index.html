@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バナー制作サンプル｜Lumière 初回体験キャンペーン</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c2230;--ink-soft:#5b6373;--line:#e7e9ef;--bg:#fafbfc;--accent:#2f5d8a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Inter","Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between}
+.back{font-size:.9rem;font-weight:600;color:var(--accent);text-decoration:none}
+.back::before{content:"← "}
+.hero{padding:60px 0 30px;text-align:center}
+.en{font-size:.72rem;letter-spacing:.22em;color:var(--accent);font-weight:600;text-transform:uppercase}
+.hero h1{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;margin:10px 0 14px}
+.hero p{color:var(--ink-soft);max-width:640px;margin:0 auto;font-size:.95rem}
+.note{max-width:640px;margin:18px auto 0;font-size:.82rem;color:var(--ink-soft);background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 18px}
+.banners{padding:44px 0 90px;display:flex;flex-direction:column;gap:46px}
+.item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(28,34,48,.05)}
+.label{display:flex;align-items:baseline;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.label h2{font-size:1.1rem;font-weight:700}
+.label .size{font-size:.78rem;color:#fff;background:var(--accent);padding:3px 10px;border-radius:20px;font-weight:600}
+.use{font-size:.85rem;color:var(--ink-soft);margin-bottom:18px}
+.stage{display:flex;justify-content:center;background:var(--bg);border-radius:12px;padding:24px}
+.preview{overflow:hidden;border-radius:6px;box-shadow:0 6px 24px rgba(28,34,48,.12)}
+.preview iframe{border:0;display:block;transform-origin:0 0}
+.sq{width:392px;height:392px}.sq iframe{width:1080px;height:1080px;transform:scale(.363)}
+.wide{width:660px;height:345px}.wide iframe{width:1200px;height:628px;transform:scale(.55)}
+.story{width:248px;height:441px}.story iframe{width:1080px;height:1920px;transform:scale(.2296)}
+.open{display:inline-block;margin-top:14px;font-size:.85rem;font-weight:600;color:var(--accent);text-decoration:none}
+.open::after{content:" ↗"}
+footer{background:var(--ink);color:#aeb6c6;text-align:center;padding:36px 24px;font-size:.8rem}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <strong>Banner Samples</strong>
+  <a href="../index.html" class="back">ポートフォリオに戻る</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="en">Banner Design</p>
+  <h1>バナー制作サンプル｜初回体験キャンペーン</h1>
+  <p>架空サロン「Lumière」の集客を想定し、<b>1つの訴求（なりたい肌×初回体験）を各媒体サイズに展開</b>したバナーセットです。配信先に合わせ、写真の見せ方・情報量・CTAを最適化しています。</p>
+  <div class="note">※ ポートフォリオ用の自主制作サンプルです（実在の店舗・案件ではありません）。モデルはAI生成画像を使用しています。</div>
+</div></section>
+
+<section><div class="wrap banners">
+  <div class="item">
+    <div class="label"><h2>正方形バナー</h2><span class="size">1080 × 1080</span></div>
+    <p class="use">Instagram／Facebookのフィード投稿向け。顔の透明感を主役に、左に訴求と価格を凝縮。</p>
+    <div class="stage"><div class="preview sq"><iframe src="banner_square.html" scrolling="no"></iframe></div></div>
+    <a href="banner_square.html" class="open" target="_blank">原寸で開く</a>
+  </div>
+  <div class="item">
+    <div class="label"><h2>横長バナー</h2><span class="size">1200 × 628</span></div>
+    <p class="use">Web広告／OGP向け。横長でも視線が左→右に流れるよう、訴求を左、写真を右に配置。</p>
+    <div class="stage"><div class="preview wide"><iframe src="banner_wide.html" scrolling="no"></iframe></div></div>
+    <a href="banner_wide.html" class="open" target="_blank">原寸で開く</a>
+  </div>
+  <div class="item">
+    <div class="label"><h2>ストーリーズ／縦型バナー</h2><span class="size">1080 × 1920</span></div>
+    <p class="use">Instagram・TikTokのストーリーズ向け。スマホ全画面で写真を大きく使い、下部にCTAを集約。</p>
+    <div class="stage"><div class="preview story"><iframe src="banner_story.html" scrolling="no"></iframe></div></div>
+    <a href="banner_story.html" class="open" target="_blank">原寸で開く</a>
+  </div>
+</div></section>
+
+<footer>架空サロン「Lumière」｜ポートフォリオ用バナー制作サンプル</footer>
+</body>
+</html>
