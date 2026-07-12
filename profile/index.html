@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロフィールページ制作サンプル｜YoUdai_work.Portfolio</title>
+<meta name="description" content="経歴・実績を1枚にまとめ、QRコードで共有できるプロフィールページの制作サンプル3種。">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f1;--ink:#15171c;--soft:#6b7280;--line:#e4e1da;--accent:#2f5d8a;--accent2:#c0566a;--card:#fffefb}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Inter","Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+header{position:sticky;top:0;background:rgba(247,245,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.brand{font-weight:800}
+.brand i{color:#7fa8d0;font-style:normal}
+.nav a.back{font-size:.85rem;color:var(--soft)}
+.hero{text-align:center;padding:64px 0 34px}
+.hero .en{font-size:.7rem;letter-spacing:.28em;color:var(--accent);font-weight:700;text-transform:uppercase}
+.hero h1{font-size:1.8rem;margin-top:8px}
+.hero p{color:var(--soft);font-size:.93rem;margin-top:10px;max-width:620px;margin-left:auto;margin-right:auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:30px 0 70px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(21,23,28,.1)}
+.head{padding:26px 24px 18px;color:#fff}
+.c1 .head{background:linear-gradient(135deg,#16324f,#1f4468)}
+.c2 .head{background:linear-gradient(135deg,#7c5cff,#ff5c8a)}
+.c3 .head{background:linear-gradient(135deg,#6b4a2e,#c96f4a)}
+.head .tag{font-size:.68rem;letter-spacing:.2em;opacity:.85;text-transform:uppercase;font-weight:700}
+.head h2{font-size:1.1rem;margin-top:4px}
+.bd{padding:20px 24px;font-size:.86rem;color:var(--soft);flex:1}
+.qr{display:flex;align-items:center;gap:14px;padding:0 24px 20px}
+.qr img{width:84px;height:84px;border:1px solid var(--line);border-radius:8px}
+.qr span{font-size:.75rem;color:var(--soft)}
+.more{display:block;text-align:center;background:var(--ink);color:#fff;padding:13px;font-size:.85rem;transition:.3s}
+.more:hover{background:var(--accent)}
+.note{text-align:center;color:var(--soft);font-size:.8rem;padding-bottom:60px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand">YoUdai_work<i>.</i>Portfolio</a>
+    <a href="../index.html#samples" class="back">← ポートフォリオへ戻る</a>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <span class="en">Profile Page Samples</span>
+  <h1>プロフィールページ 制作サンプル</h1>
+  <p>経歴・実績・人柄を1枚にまとめ、<b>QRコード</b>で名刺や商談から即共有。職種に合わせた3つのデザイン系統をご覧いただけます（人物・実績はすべて架空です）。</p>
+</div>
+
+<div class="wrap grid">
+  <div class="card c1">
+    <div class="head"><span class="tag">Executive</span><h2>経営者・士業向け（誠実系）</h2></div>
+    <div class="bd">信頼を重視した紺×金の落ち着いた設計。経歴タイムライン・実績数値・お客様の声で「任せられる人」を伝えます。</div>
+    <div class="qr"><img src="ceo/qr.png" alt="QR"><span>スマホで読み取り<br>→ そのままページが開きます</span></div>
+    <a class="more" href="ceo/">サンプルを見る →</a>
+  </div>
+  <div class="card c2">
+    <div class="head"><span class="tag">Creative</span><h2>フリーランス向け（クリエイティブ系）</h2></div>
+    <div class="bd">ダーク×グラデで個性と実力を印象づける設計。スキル・実績数値・代表作を「数字で語れる」形に整理します。</div>
+    <div class="qr"><img src="freelance/qr.png" alt="QR"><span>スマホで読み取り<br>→ そのままページが開きます</span></div>
+    <a class="more" href="freelance/">サンプルを見る →</a>
+  </div>
+  <div class="card c3">
+    <div class="head"><span class="tag">Local Shop</span><h2>店舗オーナー向け（温かみ系）</h2></div>
+    <div class="bd">人柄とものがたりで愛着を生む設計。こだわり・あゆみ・店舗情報をまとめ、ファンづくりと来店につなげます。</div>
+    <div class="qr"><img src="shop/qr.png" alt="QR"><span>スマホで読み取り<br>→ そのままページが開きます</span></div>
+    <a class="more" href="shop/">サンプルを見る →</a>
+  </div>
+</div>
+
+<p class="note">制作のご相談: <a href="mailto:youdai.works@gmail.com" style="text-decoration:underline">youdai.works@gmail.com</a> ｜ 料金は <a href="../pricing.html" style="text-decoration:underline">料金表</a> をご覧ください</p>
+
+</body>
+</html>
