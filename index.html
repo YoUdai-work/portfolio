@@ -292,7 +292,9 @@ footer{background:var(--ink);color:#7a828f;text-align:center;padding:40px 24px;f
     <p class="reveal d1">LP・バナー・ECサイトのご相談を承っております。<br>お気軽にご連絡ください。</p>
     <div class="cbtns reveal d2">
       <a href="mailto:youdai.works@gmail.com" class="btn btn-pri">メールで相談する <span class="ar">→</span></a>
+      <button type="button" class="btn btn-ghost" id="copy-mail" onclick="navigator.clipboard.writeText('youdai.works@gmail.com').then(()=>{this.textContent='コピーしました ✓';setTimeout(()=>{this.innerHTML='アドレスをコピー';},2000)})">アドレスをコピー</button>
     </div>
+    <p class="reveal d2" style="margin-top:18px;font-size:.95rem;letter-spacing:.04em">✉ <span style="color:#fff;user-select:all">youdai.works@gmail.com</span><br><span style="font-size:.78rem;color:#8a93a6">※ボタンが反応しない場合は、上記アドレスへ直接メールをお送りください（24時間以内に返信します）</span></p>
   </div>
 </section>
 
