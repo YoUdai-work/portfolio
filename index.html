@@ -63,6 +63,8 @@ header.solid{background:rgba(247,245,241,.85);backdrop-filter:blur(10px);border-
 .btn-pri .ar{transition:.28s}.btn-pri:hover .ar{transform:translateX(5px)}
 .btn-ghost{border:1px solid var(--line);color:var(--ink)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px)}
+button.btn{font-family:inherit;font-size:.95rem;cursor:pointer;border:none;background:#fff;color:var(--ink)}
+button.btn:hover{background:var(--accent);color:#fff;transform:translateY(-3px)}
 .scrollcue{margin-top:64px;font-size:.7rem;letter-spacing:.24em;color:var(--soft);display:flex;flex-direction:column;align-items:center;gap:8px;width:fit-content;opacity:0}
 .play .scrollcue{animation:up2 1s .9s ease forwards}
 .scrollcue .arrow{font-size:1.25rem;line-height:1;color:var(--accent);animation:bounce 1.6s ease-in-out infinite}
@@ -290,11 +292,11 @@ footer{background:var(--ink);color:#7a828f;text-align:center;padding:40px 24px;f
     <p class="en reveal">Contact</p>
     <h2 class="reveal d1">制作のご相談、承ります。</h2>
     <p class="reveal d1">LP・バナー・ECサイトのご相談を承っております。<br>お気軽にご連絡ください。</p>
+    <p class="reveal d2" style="font-size:1.15rem;letter-spacing:.05em;margin-bottom:20px">✉ <span style="color:#fff;user-select:all;font-weight:700">youdai.works@gmail.com</span></p>
     <div class="cbtns reveal d2">
-      <a href="mailto:youdai.works@gmail.com" class="btn btn-pri">メールで相談する <span class="ar">→</span></a>
-      <button type="button" class="btn btn-ghost" id="copy-mail" onclick="navigator.clipboard.writeText('youdai.works@gmail.com').then(()=>{this.textContent='コピーしました ✓';setTimeout(()=>{this.innerHTML='アドレスをコピー';},2000)})">アドレスをコピー</button>
+      <button type="button" class="btn" id="copy-mail" onclick="navigator.clipboard.writeText('youdai.works@gmail.com').then(()=>{this.textContent='コピーしました ✓';setTimeout(()=>{this.textContent='アドレスをコピー';},2000)})">アドレスをコピー</button>
     </div>
-    <p class="reveal d2" style="margin-top:18px;font-size:.95rem;letter-spacing:.04em">✉ <span style="color:#fff;user-select:all">youdai.works@gmail.com</span><br><span style="font-size:.78rem;color:#8a93a6">※ボタンが反応しない場合は、上記アドレスへ直接メールをお送りください（24時間以内に返信します）</span></p>
+    <p class="reveal d2" style="margin-top:16px"><span style="font-size:.78rem;color:#8a93a6">上記アドレスへお気軽にどうぞ。24時間以内に返信します。</span></p>
   </div>
 </section>
 
