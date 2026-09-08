@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>株式会社テンプラス｜経費のミナオシから、売上・集客アップまで。</title>
+<meta name="description" content="創業2001年、25年目。コピー用紙・ETC・燃料・印刷・水道から、交流会・レンタルオフィスまで。中小事業者の経費削減と集客をワンストップで。株式会社テンプラス。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16324f;      /* ブランド基調（既存プロフィールページと統一） */
+  --navy2:#1f4468;
+  --gold:#b39158;      /* 品格アクセント */
+  --red:#c8102e;       /* 数字・削減率の強調 */
+  --ink:#1c2a36;
+  --soft:#63737f;
+  --bg:#f7f6f3;
+  --bg2:#eef1f4;
+  --line:#e2e6ea;
+  --card:#fffefc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+html,body{overflow-x:hidden;max-width:100%}
+body{font-family:"Inter","Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Noto Serif JP",serif}
+.en{font-size:.7rem;letter-spacing:.28em;color:var(--gold);font-weight:700;text-transform:uppercase}
+
+/* ===== intro ===== */
+#intro{position:fixed;inset:0;z-index:100;background:var(--navy);display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s}
+#intro.hide{opacity:0;visibility:hidden}
+#intro .it{overflow:hidden;text-align:center}
+#intro .it b{display:inline-block;color:#fff;font-size:clamp(1.5rem,5vw,2.7rem);font-weight:800;letter-spacing:.06em;transform:translateY(110%);animation:up 1s .15s cubic-bezier(.2,.8,.2,1) forwards}
+#intro .it b i{color:var(--gold);font-style:normal}
+
+/* ===== progress / header ===== */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--navy),var(--gold));z-index:90;transition:width .1s}
+header{position:fixed;top:0;left:0;right:0;z-index:80;background:transparent;transition:.4s}
+header.solid{background:rgba(247,246,243,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+/* 未スクロール時はヒーロー（濃紺）の上に重なるため白抜き。solid付与で通常配色へ戻す */
+.brand{font-weight:800;font-size:1.05rem;letter-spacing:.02em;color:#fff;white-space:nowrap;transition:color .4s}
+.brand i{color:var(--gold);font-style:normal;transition:color .4s}
+.brand small{display:block;font-size:.6rem;letter-spacing:.18em;color:#9fb4c8;font-weight:600;transition:color .4s}
+header.solid .brand{color:var(--navy)}
+header.solid .brand i{color:var(--red)}
+header.solid .brand small{color:var(--soft)}
+.nav-links{display:flex;gap:26px;font-size:.83rem;font-weight:600;color:#e2ebf3;transition:color .4s}
+header.solid .nav-links{color:var(--ink)}
+.nav-links a{position:relative;white-space:nowrap}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:.3s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--gold);color:#fff!important;padding:10px 20px;border-radius:8px;font-size:.8rem;font-weight:700;transition:.3s;white-space:nowrap}
+.nav-cta:hover{background:#c6a266;transform:translateY(-2px)}
+header.solid .nav-cta{background:var(--navy)}
+header.solid .nav-cta:hover{background:var(--gold)}
+@media(max-width:900px){.nav-links{display:none}}
+
+/* ===== hero ===== */
+.hero{padding:170px 0 96px;position:relative;overflow:hidden;color:#fff;background:#12293f}
+/* 背景写真＋濃紺グラデーションで可読性を確保 */
+.hero .bg{position:absolute;inset:0;background:url("img/hero.jpg") center/cover no-repeat;opacity:.5}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(12,32,50,.94) 0%,rgba(16,42,66,.82) 46%,rgba(20,58,92,.55) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero .float{position:absolute;border-radius:50%;filter:blur(3px);opacity:.22;animation:floaty 8s ease-in-out infinite;pointer-events:none;z-index:1}
+.hero .f1{width:380px;height:380px;background:radial-gradient(#8fb6dc,transparent 70%);top:20px;right:-90px}
+.hero .f2{width:240px;height:240px;background:radial-gradient(#d8b877,transparent 70%);bottom:-40px;left:38%;animation-delay:1.6s}
+.hero .badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.28);border-radius:100px;padding:7px 18px;font-size:.76rem;letter-spacing:.1em;color:#e6eef6;margin-bottom:26px}
+.hero .badge b{color:var(--gold);font-family:"Inter";font-weight:800}
+.kt .line{overflow:hidden;display:block}
+.kt .line span{display:inline-block;transform:translateY(115%);font-weight:800;font-size:clamp(1.85rem,5.6vw,3.5rem);line-height:1.28;letter-spacing:.01em}
+.kt em{font-style:normal;color:var(--gold)}
+.play .kt .line span{animation:up 1.05s cubic-bezier(.2,.8,.2,1) forwards}
+.play .kt .line:nth-child(2) span{animation-delay:.12s}
+.play .kt .line:nth-child(3) span{animation-delay:.24s}
+.hero p.lead{margin-top:26px;font-size:1rem;color:#cfdcea;max-width:600px;opacity:0;transform:translateY(20px)}
+.play p.lead{animation:up2 .9s .5s ease forwards}
+.hero-btns{margin-top:36px;display:flex;gap:13px;flex-wrap:wrap;opacity:0;transform:translateY(20px)}
+.play .hero-btns{animation:up2 .9s .66s ease forwards}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:10px;font-weight:700;font-size:.94rem;transition:.28s}
+.btn-pri{background:var(--gold);color:#fff;box-shadow:0 12px 26px rgba(0,0,0,.22)}
+.btn-pri:hover{background:#c6a266;transform:translateY(-3px)}
+.btn-pri .ar{transition:.28s}.btn-pri:hover .ar{transform:translateX(5px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.scrollcue{margin-top:54px;font-size:.68rem;letter-spacing:.24em;color:#9fb4c8;display:flex;flex-direction:column;align-items:center;gap:6px;width:fit-content;opacity:0}
+.play .scrollcue{animation:up2 1s .9s ease forwards}
+.scrollcue .arrow{font-size:1.2rem;line-height:1;color:var(--gold);animation:bounce 1.6s ease-in-out infinite}
+@media(max-width:900px){.hero{padding:130px 0 74px}}
+
+/* ===== sections ===== */
+section{padding:88px 0;position:relative}
+.sec-head{margin-bottom:46px}
+.sec-head h2{font-size:clamp(1.5rem,3.8vw,2.15rem);font-weight:800;margin-top:8px;letter-spacing:.01em;color:var(--navy)}
+.sec-head p.desc{font-size:.92rem;color:var(--soft);margin-top:14px;max-width:660px}
+.reveal{opacity:0;transform:translateY(34px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+/* ===== numbers ===== */
+.numbers{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.num{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:28px 10px;transition:.3s}
+.num:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(22,50,79,.09)}
+.num b{font-family:"Inter";font-size:2.2rem;font-weight:800;color:var(--navy);display:block;line-height:1.1}
+.num b i{font-style:normal;color:var(--gold);font-size:.95rem;font-weight:700}
+.num span{font-size:.76rem;color:var(--soft);display:block;margin-top:8px;letter-spacing:.04em}
+@media(max-width:700px){.nums{grid-template-columns:1fr 1fr}}
+
+/* ===== problems ===== */
+.problems{background:var(--bg2)}
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prob{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;position:relative}
+.prob .q{font-family:"Inter";font-size:1.5rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:12px;display:block}
+.prob h3{font-size:1rem;color:var(--navy);margin-bottom:6px}
+.prob p{font-size:.86rem;color:var(--soft)}
+.prob-answer{margin-top:34px;background:var(--navy);color:#fff;border-radius:16px;padding:32px 34px;text-align:center}
+.prob-answer .sm{font-size:.8rem;letter-spacing:.14em;color:#a8bdd2}
+.prob-answer b{display:block;font-size:clamp(1.15rem,3.2vw,1.6rem);margin:10px 0 8px;font-weight:800}
+.prob-answer b em{font-style:normal;color:var(--gold)}
+.prob-answer p{font-size:.88rem;color:#c6d5e3}
+@media(max-width:820px){.prob-grid{grid-template-columns:1fr}}
+
+/* ===== service cards ===== */
+.svc-list{display:grid;gap:22px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.35s;display:grid;grid-template-columns:270px 1fr}
+.svc:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(22,50,79,.11)}
+/* 左パネル＝サービス写真。下半分に濃紺グラデをかけて見出しを載せる */
+.svc .side{position:relative;background:var(--navy) center/cover no-repeat;color:#fff;padding:28px 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:10px;min-height:340px;overflow:hidden}
+.svc .side::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,32,50,.12) 0%,rgba(12,32,50,.55) 46%,rgba(12,32,50,.93) 100%)}
+.svc .side>*{position:relative;z-index:2}
+.svc .side .ico{width:38px;height:38px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.svc .side .cat{font-size:.66rem;letter-spacing:.18em;color:#c3d4e2}
+.svc .side h3{font-size:1.2rem;font-weight:800;line-height:1.45;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.svc .side .sub{font-size:.74rem;color:#c3d4e2;letter-spacing:.03em}
+/* 各サービスの写真 */
+.svc.i-paper .side{background-image:url("img/paper.jpg")}
+.svc.i-etc .side{background-image:url("img/etc.jpg")}
+.svc.i-fuel .side{background-image:url("img/fuel.jpg")}
+.svc.i-printer .side{background-image:url("img/printer.jpg")}
+.svc.i-water .side{background-image:url("img/water.jpg")}
+.svc.i-meetup .side{background-image:url("img/meetup.jpg")}
+.svc.i-office .side{background-image:url("img/office.jpg")}
+.svc .body{padding:28px 30px}
+.svc .hook{font-size:clamp(1.05rem,2.6vw,1.35rem);font-weight:800;color:var(--navy);line-height:1.5;margin-bottom:14px}
+.svc .hook em{font-style:normal;color:var(--red);font-family:"Inter","Noto Sans JP",sans-serif;font-size:1.5em;letter-spacing:-.01em;vertical-align:-.03em}
+.svc ul{list-style:none;display:grid;gap:7px;margin-bottom:16px}
+.svc ul li{font-size:.88rem;color:var(--ink);padding-left:22px;position:relative}
+.svc ul li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:50%;border:2px solid var(--gold)}
+.pricebox{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.pricebox .pl{font-size:.72rem;color:var(--soft);letter-spacing:.08em;font-weight:700}
+.pricebox .pv{font-family:"Inter","Noto Sans JP",sans-serif;font-size:1.15rem;font-weight:800;color:var(--navy)}
+.pricebox .pv small{font-size:.72rem;font-weight:600;color:var(--soft)}
+.note{font-size:.74rem;color:var(--soft);margin-top:10px;line-height:1.75}
+.tagline{display:inline-block;background:var(--red);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:4px 11px;border-radius:4px;margin-bottom:12px}
+.tagline.g{background:var(--gold)}
+@media(max-width:820px){
+  .svc{grid-template-columns:1fr}
+  .svc .side{flex-direction:row;align-items:flex-end;justify-content:flex-start;gap:14px;padding:18px 22px;min-height:170px;background-position:center 38%}
+  .svc .side::before{background:linear-gradient(180deg,rgba(12,32,50,.18) 0%,rgba(12,32,50,.62) 55%,rgba(12,32,50,.94) 100%)}
+  .svc .side .ico{width:30px;height:30px;flex-shrink:0;margin-bottom:2px}
+  .svc .side .cat{display:none}
+  .svc .body{padding:24px 22px}
+}
+
+/* ===== growth（集客） ===== */
+.growth{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.free9{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0 4px}
+.free9 span{background:#fff;border:1px solid var(--line);border-radius:8px;font-size:.74rem;text-align:center;padding:8px 4px;color:var(--navy);font-weight:600}
+@media(max-width:820px){.free9{grid-template-columns:repeat(3,1fr)}}
+.cities{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.cities span{border:1px solid var(--gold);color:var(--navy);border-radius:100px;font-size:.78rem;padding:4px 14px;font-weight:600;background:#fff}
+
+/* ===== other depts ===== */
+.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.dept{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;transition:.3s}
+.dept:hover{border-color:var(--gold);transform:translateY(-4px)}
+.dept b{color:var(--navy);font-size:.98rem;display:block}
+.dept span{display:block;font-size:.82rem;color:var(--soft);margin-top:3px}
+@media(max-width:820px){.dept-grid{grid-template-columns:1fr}}
+.costlist{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px}
+.costlist p.t{font-size:.92rem;font-weight:700;color:var(--navy);margin-bottom:12px}
+.costlist .chips{display:flex;flex-wrap:wrap;gap:8px}
+.costlist .chips span{background:var(--bg2);border-radius:6px;font-size:.8rem;padding:5px 12px;color:var(--ink)}
+
+/* ===== flow ===== */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:f}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 18px;position:relative;text-align:center}
+.step::before{counter-increment:f;content:"0" counter(f);font-family:"Inter";font-size:.78rem;font-weight:800;color:var(--gold);letter-spacing:.14em;display:block;margin-bottom:8px}
+.step h3{font-size:.95rem;color:var(--navy);margin-bottom:5px}
+.step p{font-size:.78rem;color:var(--soft);line-height:1.7}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.flow{grid-template-columns:1fr}}
+
+/* ===== CEO ===== */
+.ceo{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ceo-card{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:center}
+.ceo-ph{aspect-ratio:1;border-radius:18px;background:linear-gradient(150deg,var(--navy),var(--navy2));display:flex;align-items:center;justify-content:center;color:#fff;position:relative;overflow:hidden}
+.ceo-ph .kanji{font-family:"Noto Serif JP",serif;font-size:5rem;font-weight:700;color:rgba(255,255,255,.9)}
+.ceo-ph .ring{position:absolute;inset:16px;border:1px solid var(--gold);border-radius:12px}
+.ceo-tx .role{font-size:.78rem;letter-spacing:.12em;color:var(--soft)}
+.ceo-tx h3{font-size:1.7rem;margin:4px 0 2px;color:var(--navy)}
+.ceo-tx .yomi{font-size:.72rem;letter-spacing:.14em;color:var(--gold);margin-bottom:16px}
+.ceo-tx .q{font-family:"Noto Serif JP",serif;font-size:1.2rem;color:var(--navy);border-left:4px solid var(--gold);padding-left:16px;margin-bottom:14px;line-height:1.7}
+.ceo-tx p{font-size:.9rem;color:var(--soft);margin-bottom:20px}
+.linkbtn{display:inline-flex;align-items:center;gap:9px;border:1.5px solid var(--navy);color:var(--navy);border-radius:10px;padding:13px 26px;font-weight:700;font-size:.9rem;transition:.3s}
+.linkbtn:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
+.linkbtn .ar{transition:.3s}.linkbtn:hover .ar{transform:translateX(5px)}
+@media(max-width:820px){.ceo-card{grid-template-columns:1fr;gap:24px}.ceo-ph{max-width:200px}}
+
+/* ===== company ===== */
+.cominfo{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.tbl{width:100%;border-collapse:collapse;font-size:.87rem}
+.tbl th,.tbl td{text-align:left;padding:13px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{color:var(--navy);font-weight:700;width:104px;white-space:nowrap}
+.tbl td{color:var(--ink)}
+.offices{display:grid;gap:10px}
+.office{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px}
+.office b{color:var(--navy);font-size:.92rem}
+.office span{display:block;font-size:.82rem;color:var(--soft);margin-top:2px}
+.office.soon{border-left-color:var(--soft);background:var(--bg2)}
+.office.soon b::after{content:"準備中";background:var(--soft);color:#fff;font-size:.64rem;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:9px;vertical-align:1px;letter-spacing:.06em}
+@media(max-width:820px){.cominfo{grid-template-columns:1fr}}
+
+/* ===== contact ===== */
+.contact{background:var(--navy);color:#fff;text-align:center}
+.contact .en{color:var(--gold)}
+.contact h2{font-size:clamp(1.6rem,4.6vw,2.5rem);font-weight:800;margin:12px 0 16px}
+.contact p.lead{color:#b9cbdb;max-width:560px;margin:0 auto 32px;font-size:.94rem}
+.ctel{display:inline-block;margin-bottom:26px}
+.ctel small{display:block;font-size:.72rem;letter-spacing:.16em;color:#9fb4c8;margin-bottom:4px}
+.ctel b{font-family:"Inter";font-size:clamp(1.8rem,6vw,2.7rem);font-weight:800;color:#fff;letter-spacing:.01em;transition:.3s}
+.ctel:hover b{color:var(--gold)}
+.ctel span{display:block;font-size:.74rem;color:#9fb4c8;margin-top:4px}
+.cbtns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.contact .btn-ghost{border-color:#3f5d7c;color:#dbe6f0}
+.contact .btn-ghost:hover{border-color:#fff;color:#fff}
+footer{background:#0f2438;color:#7d90a3;text-align:center;padding:34px 24px;font-size:.76rem;line-height:1.9;border-top:1px solid #1c3a55}
+footer b{color:#cfdae5}
+
+@keyframes up{to{transform:translateY(0)}}
+@keyframes up2{to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+@keyframes bounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(8px);opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div id="intro"><div class="it"><b>TENPLUS<i>+</i></b></div></div>
+<div id="prog"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <div class="brand">株式会社テンプラス<i>＋</i><small>TENPLUS SINCE 2001</small></div>
+    <nav class="nav-links">
+      <a href="#reduce">経費削減</a>
+      <a href="#growth">集客・売上</a>
+      <a href="#depts">事業部一覧</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#company">会社概要</a>
+    </nav>
+    <a href="#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="bg"></div>
+  <div class="float f1"></div><div class="float f2"></div>
+  <div class="wrap">
+    <span class="badge">おかげさまで<b>25</b>年　／　創業 2001年</span>
+    <h1 class="kt">
+      <span class="line"><span>経費の<em>ミナオシ</em>から、</span></span>
+      <span class="line"><span>売上・集客アップまで。</span></span>
+    </h1>
+    <p class="lead">コピー用紙・高速代・ガソリン代・印刷代・水道代。毎月あたりまえに出ていく経費を、品質はそのままで下げる。さらに「新しいお客様との出会い」までご用意する。中小事業者のお困りごとを、まとめて引き受ける会社です。</p>
+    <div class="hero-btns">
+      <a href="#reduce" class="btn btn-pri">経費削減サービスを見る <span class="ar">→</span></a>
+      <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+    </div>
+    <div class="scrollcue"><span class="arrow">↓</span>SCROLL</div>
+  </div>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<div class="numbers">
+  <div class="wrap">
+    <div class="nums">
+      <div class="num reveal"><b>25<i>年目</i></b><span>2001年の創業から</span></div>
+      <div class="num reveal d1"><b>5,000<i>社</i></b><span>コスト削減の実績</span></div>
+      <div class="num reveal d2"><b>80,000<i>人+</i></b><span>交流会の延べ参加者</span></div>
+      <div class="num reveal d3"><b>5<i>拠点</i></b><span>大阪・名古屋・四国・熊本・沖縄</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROBLEMS ============ -->
+<section class="problems">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Issues</p>
+      <h2>こんなお困りごと、ありませんか。</h2>
+    </div>
+    <div class="prob-grid">
+      <div class="prob reveal"><span class="q">Q1</span><h3>経費を下げたいが、何から手を付ければいいかわからない</h3><p>用紙、高速代、燃料代、印刷代、水道代。毎月出ていく金額は把握していても、「適正かどうか」は誰も教えてくれません。</p></div>
+      <div class="prob reveal d1"><span class="q">Q2</span><h3>コストは下げたいが、品質は落としたくない</h3><p>安さだけを追って紙が詰まる、印字がかすれる。結局やり直しでかえって高くつく——よくある失敗です。</p></div>
+      <div class="prob reveal d2"><span class="q">Q3</span><h3>新規のお客様との出会いが、そもそも足りない</h3><p>経費を削っても、売上が細っていけば体力は戻りません。「減らす」と「増やす」は両輪です。</p></div>
+    </div>
+    <div class="prob-answer reveal d1">
+      <p class="sm">TENPLUS の答え</p>
+      <b>「減らす」と「増やす」を、<span style="display:inline-block"><em>ひとつの窓口</em>で。</span></b>
+      <p>経費削減も、新規開拓の場づくりも、25年ぶんの取引先ネットワークで。担当が一人つくだけで、まとめて片付きます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 経費削減 ============ -->
+<section id="reduce">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Cost Reduction</p>
+      <h2>経費削減サービス</h2>
+      <p class="desc">共同購入のスケールメリットで、全国統一の特別価格をご提供します。品質は日本製・大手ブランドのまま、単価だけを下げるのが基本方針です。</p>
+    </div>
+
+    <div class="svc-list">
+
+      <!-- 01 コピー用紙 -->
+      <div class="svc i-paper reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+          <div>
+            <p class="cat">SERVICE 01</p>
+            <h3>コピー用紙</h3>
+            <p class="sub">αエコペーパー TR / NH</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline">日本イチ安い</span>
+          <p class="hook">A4・5,000枚が<em>4,081</em>円。<br>品質の安定した日本製。</p>
+          <ul>
+            <li><b>タイプTR</b>／白色度 約94%・坪量 約66g/㎡ ― カラーが映える際立つ白さ</li>
+            <li><b>タイプNH</b>／白色度 約81%・坪量 約64g/㎡ ― 目にやさしい自然な白さ。閲覧頻度の高い書類に</li>
+            <li>FSC認証パルプ・ECFパルプ・植林木パルプ・GPN掲載のエコ設計</li>
+            <li>A4・B4・B5をご用意。まとめ買いでさらにお得に</li>
+            <li>1回のご注文金額が500円（税込）以上で、配送料は当社負担</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">A4 1箱 5,000枚</span>
+            <span class="pv">¥4,081 <small>（税込／税抜 ¥3,710）</small></span>
+          </div>
+          <p class="note">※ 沖縄および離島を除く。1回のご注文金額が500円（税込）未満の場合、配送料220円（税込）をご負担いただきます。<br>※ 上記価格の有効期限は <b>2026年10月末</b> まで。以降の価格はお問い合わせください。</p>
+        </div>
+      </div>
+
+      <!-- 02 ETC -->
+      <div class="svc i-etc reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M5 17h14M3 17v-4l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5v4"/><circle cx="7.5" cy="17" r="1.6"/><circle cx="16.5" cy="17" r="1.6"/><path d="M6 12h12"/></svg>
+          <div>
+            <p class="cat">SERVICE 02</p>
+            <h3>ETCカード</h3>
+            <p class="sub">HIGHWAY PLUS</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline">最大42%割引</span>
+          <p class="hook">NEXCOが最大<em>42</em>%割引。<br>首都高・阪高も最大<em>20</em>%割引。</p>
+          <ul>
+            <li>大口・多頻度割引の適用により、高速料金そのものを圧縮</li>
+            <li>NEXCOも首都高・阪高も、月<b>5,000円以上</b>のご利用からメリットが出ます</li>
+            <li>利用明細で一元管理。カード別・車両別・支店別の管理にも対応</li>
+            <li>法人・自営業者様に限定したサービスです</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">出資金</span>
+            <span class="pv">¥10,000 <small>（脱会時にご返金）</small></span>
+            <span class="pl" style="margin-left:8px">組合費</span>
+            <span class="pv">無料</span>
+          </div>
+          <p class="note">※ 組合費無料は、平均単価2,500円以上の法人様に限ります。<br>※ カード発行のお申し込み・審査には所定の手続きが必要です。</p>
+        </div>
+      </div>
+
+      <!-- 03 燃料 -->
+      <div class="svc i-fuel reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M4 20V5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v15"/><path d="M3 20h11"/><path d="M13 10h3a2 2 0 0 1 2 2v4a1.5 1.5 0 0 0 3 0V9l-2.5-2.5"/><path d="M6 8h5"/></svg>
+          <div>
+            <p class="cat">SERVICE 03</p>
+            <h3>燃料カード</h3>
+            <p class="sub">ENEOS 法人カード</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline">最大7円引き</span>
+          <p class="hook">ガソリンが、軽油が、<br>最大<em>7</em>円引きに。</p>
+          <ul>
+            <li>共同購入により、<b>全国統一価格</b>でガソリン・軽油を購入できます</li>
+            <li>全国のエネオススタンドで給油OK。宇佐美・出光にも対応したカードをご用意</li>
+            <li>手数料・保証金なし。カード発行手数料も無料</li>
+            <li>福利厚生として、従業員様のご利用も可能</li>
+            <li>明細書で使用状況を見える化。給油データはCSV・PDFで配信可能</li>
+            <li>盗難・紛失保険に加入済み。一括後払いのご請求で、保証金も不要</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">初期費用</span>
+            <span class="pv">¥10,000 <small>（税別／初回のみ）</small></span>
+            <span class="pl" style="margin-left:8px">取扱手数料</span>
+            <span class="pv">¥5,000 <small>（税別／初回のみ）</small></span>
+            <span class="pl" style="margin-left:8px">組合年会費</span>
+            <span class="pv">無料</span>
+          </div>
+          <p class="note">※ エネオスカードは、高速道路上のスタンドにつきましては割引対象外です。<br>※ 盗難・紛失時の再発行には事務手数料がかかる場合がございます。</p>
+        </div>
+      </div>
+
+      <!-- 04 プリント放題 -->
+      <div class="svc i-printer reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M6 9V4h12v5"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>
+          <div>
+            <p class="cat">SERVICE 04</p>
+            <h3>プリント放題</h3>
+            <p class="sub">プリンターレンタル</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline">インク代 0円</span>
+          <p class="hook">インク代・トナー代・<br>カウンター料金が<em>0</em>円。</p>
+          <ul>
+            <li>月額料金だけ。<b>使えば使うほど</b>1枚あたりのコストが下がります</li>
+            <li>レンタル期間内はインクを何度でも無料交換。空になる前に専用注文書で依頼するだけ</li>
+            <li>複合機モデル（H86-A4）はスキャナー・コピー・FAX機能付き</li>
+            <li>導入前に<b>1週間のデモ機貸し出し</b>が可能です</li>
+            <li>チラシ・POP・メニュー・教材・テスト用紙など、カラー印刷を気にせず使えます</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">H-A4 インク使い放題</span>
+            <span class="pv">月額 ¥14,800 <small>（税込 ¥15,984）</small></span>
+          </div>
+          <div class="pricebox" style="margin-top:8px">
+            <span class="pl">H86-A4 複合機</span>
+            <span class="pv">月額 ¥19,000 <small>（税込 ¥20,520）</small></span>
+          </div>
+          <p class="note">※ インク限定モデル（H-A4 ¥7,000／H86-A4 ¥9,500・いずれも税別）もございます。<br>※ 年間50,000枚までの使用の場合。お客様起因でない障害はプリンターを無償交換いたします。</p>
+        </div>
+      </div>
+
+      <!-- 05 節水器 -->
+      <div class="svc i-water reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 2.7s6 6.3 6 10.3a6 6 0 0 1-12 0c0-4 6-10.3 6-10.3z"/><path d="M9.2 13.6a2.9 2.9 0 0 0 2.8 2.9"/></svg>
+          <div>
+            <p class="cat">SERVICE 05</p>
+            <h3>水道代の節約</h3>
+            <p class="sub">水洗トイレ節水器「ロスカット」</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline">最大30%以上節水</span>
+          <p class="hook">1回で<em>5</em>リットル。<br>取り付けるだけで、ずっと節約。</p>
+          <ul>
+            <li>タンク内の水位を適正に調整し、余分な水をカット。1回の使用で約5リットル（約2円）節約</li>
+            <li>効果は<b>半永久的</b>。メンテナンス不要で、水圧は従来どおり</li>
+            <li>和式・洋式のほとんどに取り付け可能</li>
+            <li>ホテルチェーン30室設置で<b>年間60万円</b>の削減事例。大手外食チェーンでも採用</li>
+            <li>飲食店・FC店・パチンコ・カラオケ店・公共施設・マンションオーナー様に多数ご利用いただいています</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">定価</span>
+            <span class="pv">¥4,500 <small>（税込／1台）</small></span>
+            <span class="pl" style="margin-left:8px">一般家庭の目安</span>
+            <span class="pv">年間 約20,000円 <small>の節約</small></span>
+          </div>
+          <p class="note">※ 一般家庭（4人家族・東京23区）で年間54㎥の節水となる場合の試算です。ご使用状況により効果は変動します。<br>※ タンクがない場合、タンクが高所にある場合、ボタン式のトイレ、節水機能付きタンクには取付できません。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 集客・売上 ============ -->
+<section id="growth" class="growth">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Business Growth</p>
+      <h2>集客・売上アップ</h2>
+      <p class="desc">経費を減らすだけでは、会社は伸びません。テンプラスは「新しい出会い」と「事業を始める場所」もご用意しています。</p>
+    </div>
+
+    <div class="svc-list">
+
+      <!-- 交流会 -->
+      <div class="svc i-meetup reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17.5" cy="9.5" r="2.4"/><path d="M15.5 20a5 5 0 0 1 6.5-4.8"/></svg>
+          <div>
+            <p class="cat">SERVICE 06</p>
+            <h3>異業種交流会</h3>
+            <p class="sub">ビジネスマッチング</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline g">2001年から25年目</span>
+          <p class="hook">延べ<em>80,000</em>人以上が参加。<br>昼イチにさくっと、75分。</p>
+          <div class="cities"><span>大阪（梅田）</span><span>京都（四条烏丸）</span><span>神戸（三宮）</span><span>奈良（近鉄奈良駅）</span><span>名古屋</span></div>
+          <ul>
+            <li>2001年より開催、<b>日本イチの歴史</b>を持つビジネス交流会です</li>
+            <li>平均参加人数は10〜20名程度。ざっくばらんな雰囲気で、はじめての方・女性の方の参加も多数</li>
+            <li>お一人での参加が多く、遅れての参加・途中退場もOK</li>
+            <li>新規見込み客や御取引先様の開拓、起業準備、人脈づくりに</li>
+            <li>クレーム・迷惑な勧誘行為は主催者が厳格に対応。安心してご参加いただけます</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">参加費</span>
+            <span class="pv">¥2,000 <small>（税込／通常 ¥2,500・割引特典開催中）</small></span>
+            <span class="pl" style="margin-left:8px">所要</span>
+            <span class="pv">75〜90分</span>
+          </div>
+          <p class="note">※ 開催日程・会場は都市ごとに異なります。最新の日程は交流会サイト（kouryukai.tv）をご覧ください。<br>※ お持ち物＝名刺20枚程度。会場によりお茶・ソフトドリンク付き。</p>
+        </div>
+      </div>
+
+      <!-- レンタルオフィス -->
+      <div class="svc i-office reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V6a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v15"/><path d="M14 21V10h4a1 1 0 0 1 1 1v10"/><path d="M8 9h3M8 13h3M8 17h3"/></svg>
+          <div>
+            <p class="cat">SERVICE 07</p>
+            <h3>レンタルオフィス</h3>
+            <p class="sub">NAGOYA PLUS 伏見</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline g">9つの無料サービス付き</span>
+          <p class="hook">名古屋 伏見で、月<em>20,000</em>円〜。<br>ノートパソコン1台で、オフィスが持てます。</p>
+          <div class="free9">
+            <span>保証金 無料</span><span>共益費 無料</span><span>机・椅子 無料</span><span>水道光熱費 無料</span><span>ロッカー 無料</span>
+            <span>カラー印刷代 無料</span><span>ネット環境 無料</span><span>冷蔵庫・レンジ 無料</span><span>フリースペース・<br>会議室 無料</span><span style="background:var(--gold);color:#fff;border-color:var(--gold)">交流会 金券<br>5枚/月</span>
+          </div>
+          <ul>
+            <li>伏見駅 徒歩5分・名古屋駅 徒歩9分。<b>最寄り5駅</b>が使え、東海圏全域へアクセス抜群</li>
+            <li>法人登記・住所利用OK。郵便受取サービスにも対応</li>
+            <li>敷金・礼金不要。デスク・チェア・インターネット完備ですぐに使えます</li>
+            <li>セキュリティ完備・清潔で快適なオフィス環境。個室オフィス／会議室／共用ラウンジをご用意</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">月額</span>
+            <span class="pv">¥20,000〜 <small>（税別）</small></span>
+            <span class="pl" style="margin-left:8px">初期登録料</span>
+            <span class="pv">¥60,000 <small>（税別／ご入室時）</small></span>
+          </div>
+          <p class="note">※ 会議室・フリースペースは時間制限あり・予約制です。<br>※ 空室状況は時期により変動します。まずはお問い合わせください。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 事業部一覧 ============ -->
+<section id="depts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Divisions</p>
+      <h2>その他の事業部</h2>
+      <p class="desc">「経費の削減」から「売上・集客アップ」まで。中小事業者の困りごとをまとめて解決する事業部を揃えています。</p>
+    </div>
+    <div class="dept-grid">
+      <div class="dept reveal"><b>WEBプラス</b><span>ホームページ制作・Web活用支援</span></div>
+      <div class="dept reveal d1"><b>動画プラス</b><span>PR動画・プロモーション動画の制作</span></div>
+      <div class="dept reveal d2"><b>交流会プラス</b><span>全国の異業種交流会（フレンドリンク）</span></div>
+      <div class="dept reveal"><b>印刷プラス</b><span>名刺・チラシ等の印刷</span></div>
+      <div class="dept reveal d1"><b>飲食店プラス</b><span>飲食店の集客・運営サポート</span></div>
+      <div class="dept reveal d2"><b>起業プラス</b><span>これから起業する方の支援</span></div>
+    </div>
+    <div class="costlist reveal d1">
+      <p class="t">こんな経費も、見直しの対象です。</p>
+      <div class="chips">
+        <span>テナント代・オフィス家賃</span><span>電気代</span><span>ガス代・LPガス代</span><span>水道代</span><span>通信費</span><span>携帯代</span><span>カード手数料</span><span>広告費・DM代</span><span>ホームページ</span><span>AEDの無償寄贈</span>
+      </div>
+      <p class="note">気になる項目があれば、まずは現在の請求書をお見せください。適正かどうかを診断し、見直せる部分をご提案します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 流れ ============ -->
+<section id="flow" class="growth">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Flow</p>
+      <h2>ご利用の流れ</h2>
+      <p class="desc">お電話1本から。現在お使いのものと請求書を拝見して、下げられる部分をお伝えします。</p>
+    </div>
+    <div class="flow">
+      <div class="step reveal"><h3>お問い合わせ</h3><p>お電話・メール・FAXで。「どれが対象かわからない」で構いません。</p></div>
+      <div class="step reveal d1"><h3>現状のヒアリング</h3><p>ご利用状況と請求書を拝見し、削減できる余地を洗い出します。</p></div>
+      <div class="step reveal d2"><h3>ご提案</h3><p>削減額の見込みを数字でご提示。品質を落とさない前提でご説明します。</p></div>
+      <div class="step reveal d3"><h3>お申し込み</h3><p>お申込書のご記入のみ。必要書類は担当者よりお渡しします。</p></div>
+      <div class="step reveal d4"><h3>スタート・継続フォロー</h3><p>導入後も担当がつきます。他の経費のご相談もそのままどうぞ。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 代表 ============ -->
+<section id="ceo" class="ceo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Message</p>
+      <h2>代表のご紹介</h2>
+    </div>
+    <div class="ceo-card reveal d1">
+      <div class="ceo-ph"><span class="ring"></span><span class="kanji">保</span></div>
+      <div class="ceo-tx">
+        <p class="role">株式会社テンプラス 代表取締役社長</p>
+        <h3 class="serif">保 喜博</h3>
+        <p class="yomi">TAMOTSU YOSHIHIRO</p>
+        <p class="q serif">「人と会ってなんぼや。」</p>
+        <p>大阪の商店街が衰退していく状況に問題意識を持ち、2001年に創業。「ジモト還元・チイキ貢献」を掲げ、地域の事業者を支える事業を広げてきました。困っている事業者がいれば、まず会いに行く。そこから、すべては始まります。</p>
+        <a class="linkbtn" href="../tp-h7k2m/">代表プロフィールを見る <span class="ar">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 会社概要 ============ -->
+<section id="company">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Company</p>
+      <h2>会社概要</h2>
+    </div>
+    <div class="cominfo">
+      <div class="reveal">
+        <table class="tbl">
+          <tr><th>社名</th><td>株式会社テンプラス（TENPLUS）</td></tr>
+          <tr><th>創業</th><td>2001年（25年目）</td></tr>
+          <tr><th>代表者</th><td>代表取締役社長　保 喜博</td></tr>
+          <tr><th>本社</th><td>〒552-0021　大阪市港区築港3-8-2-2F</td></tr>
+          <tr><th>事業内容</th><td>経費削減コンサルティング／オフィス消耗品・ETC・燃料カードの共同購入／プリンターレンタル／節水器販売／異業種交流会の企画・運営／レンタルオフィス運営／Web・動画・印刷制作</td></tr>
+          <tr><th>電話</th><td><a href="tel:09019191515" style="color:var(--navy);font-weight:700">090-1919-1515</a>（代表）<br><a href="tel:0665713704" style="color:var(--navy);font-weight:700">06-6571-3704</a>（大阪本社）<br><a href="tel:0120513704" style="color:var(--navy);font-weight:700">0120-51-3704</a>（プリント放題）</td></tr>
+          <tr><th>メール</th><td><a href="mailto:info@tenplus.co.jp" style="color:var(--navy);font-weight:700">info@tenplus.co.jp</a></td></tr>
+          <tr><th>受付時間</th><td>平日 9:00〜18:00</td></tr>
+          <tr><th>Web</th><td><a href="https://tenplus.co.jp/" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700">tenplus.co.jp</a>　／　<a href="https://kouryukai.tv/" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700">kouryukai.tv</a>（交流会）</td></tr>
+        </table>
+      </div>
+      <div class="reveal d1">
+        <p style="font-size:.8rem;letter-spacing:.14em;color:var(--soft);font-weight:700;margin-bottom:14px">全国5拠点</p>
+        <div class="offices">
+          <div class="office"><b>大阪本社</b><span>〒552-0021　大阪市港区築港3-8-2-2F</span></div>
+          <div class="office"><b>中部支社</b><span>〒460-0003　名古屋市中区錦1-16-14-2F</span></div>
+          <div class="office"><b>四国支社</b><span>〒765-0051　香川県善通寺市上吉田町8-5-19</span></div>
+          <div class="office soon"><b>熊本支社</b><span>開設準備中です。</span></div>
+          <div class="office"><b>沖縄支社</b><span>〒900-0032　那覇市松山1-4-12-3F</span></div>
+        </div>
+        <p class="note">※ 全国どこでも対応いたします。お近くに拠点がない地域のお客様もお気軽にご相談ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="en reveal">Contact</p>
+    <h2 class="reveal d1">まずは、いまの請求書を1枚。</h2>
+    <p class="lead reveal d1">「これは下げられますか？」の一言で構いません。25年ぶんの取引先ネットワークから、下げられる方法をお探しします。ご相談・お見積りは無料です。</p>
+    <a class="ctel reveal d2" href="tel:09019191515">
+      <small>お問い合わせ電話</small>
+      <b>090-1919-1515</b>
+      <span>受付時間　平日 9:00〜18:00</span>
+    </a>
+    <div class="cbtns reveal d3">
+      <a class="btn btn-pri" href="mailto:info@tenplus.co.jp">メールで問い合わせる <span class="ar">→</span></a>
+      <a class="btn btn-ghost" href="https://kouryukai.tv/" target="_blank" rel="noopener">交流会の日程を見る</a>
+      <a class="btn btn-ghost" href="../tp-h7k2m/">代表プロフィール</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>株式会社テンプラス</b>　｜　経費の削減から、売上・集客アップのお手伝いまで。<br>
+  掲載の価格・条件は2026年9月時点の目安です。最新の内容はお問い合わせください。<br>
+  <span style="opacity:.7">このページは制作サンプルです。制作: YoUdai_work</span>
+</footer>
+
+<script>
+// intro
+addEventListener('load',()=>{
+  setTimeout(()=>{document.getElementById('intro').classList.add('hide');document.getElementById('hero').classList.add('play')},1300);
+});
+// progress + header
+addEventListener('scroll',()=>{
+  const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+  document.getElementById('prog').style.width=sc+'%';
+  document.getElementById('hd').classList.toggle('solid',h.scrollTop>40);
+});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
