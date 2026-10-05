@@ -34,10 +34,8 @@ a{color:inherit;text-decoration:none}
 .serif{font-family:"Noto Serif JP",serif}
 .en{font-size:.82rem;letter-spacing:.26em;color:var(--sub);font-weight:700;text-transform:uppercase}
 
-/* ===== logo（会社案内のロゴを実測して再現） ===== */
+/* ===== logo（会社案内のロゴを実測して再現。色は<symbol>内の各rectに直接指定＝<use>越しにCSSが届かないため） ===== */
 .logo{display:block;height:34px;width:auto}
-.logo .k{fill:var(--ink)}
-.logo .r{fill:var(--main)}
 
 /* ===== intro ===== */
 #intro{position:fixed;inset:0;z-index:100;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s}
@@ -278,17 +276,17 @@ footer .flogo b{color:var(--ink);font-size:1.04rem}
 <!-- ロゴ定義（会社案内のロゴを実測した寸法で再現。黒=#201715／マルーン=#841B35） -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="tenplus-logo" viewBox="0 0 560 246">
-    <rect class="k" x="0"   y="35"  width="84"  height="33"/>
-    <rect class="k" x="88"  y="35"  width="49"  height="210"/>
-    <rect class="r" x="147" y="35"  width="40"  height="211"/>
-    <rect class="r" x="191" y="35"  width="84"  height="33"/>
-    <rect class="r" x="191" y="124" width="84"  height="32"/>
-    <rect class="r" x="191" y="213" width="84"  height="33"/>
-    <rect class="k" x="286" y="35"  width="49"  height="210"/>
-    <rect class="k" x="339" y="35"  width="107" height="33"/>
-    <rect class="k" x="414" y="35"  width="32"  height="211"/>
-    <rect class="r" x="456" y="35"  width="104" height="34"/>
-    <rect class="r" x="491" y="0"   width="34"  height="104"/>
+    <rect fill="#201715" x="0"   y="35"  width="84"  height="33"/>
+    <rect fill="#201715" x="88"  y="35"  width="49"  height="210"/>
+    <rect fill="#841b35" x="147" y="35"  width="40"  height="211"/>
+    <rect fill="#841b35" x="191" y="35"  width="84"  height="33"/>
+    <rect fill="#841b35" x="191" y="124" width="84"  height="32"/>
+    <rect fill="#841b35" x="191" y="213" width="84"  height="33"/>
+    <rect fill="#201715" x="286" y="35"  width="49"  height="210"/>
+    <rect fill="#201715" x="339" y="35"  width="107" height="33"/>
+    <rect fill="#201715" x="414" y="35"  width="32"  height="211"/>
+    <rect fill="#841b35" x="456" y="35"  width="104" height="34"/>
+    <rect fill="#841b35" x="491" y="0"   width="34"  height="104"/>
   </symbol>
 </svg>
 
