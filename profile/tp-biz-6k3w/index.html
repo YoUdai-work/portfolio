@@ -34,7 +34,7 @@ a{color:inherit;text-decoration:none}
 .serif{font-family:"Noto Serif JP",serif}
 .en{font-size:.82rem;letter-spacing:.26em;color:var(--sub);font-weight:700;text-transform:uppercase}
 
-/* ===== logo（会社案内のロゴを実測して再現。色は<symbol>内の各rectに直接指定＝<use>越しにCSSが届かないため） ===== */
+/* ===== logo（会社案内のロゴを実測して再現。色はSVG内の各rectに直接指定） ===== */
 .logo{display:block;height:34px;width:auto}
 
 /* ===== intro ===== */
@@ -143,7 +143,7 @@ section{padding:96px 0;position:relative}
 .svc.i-water .side{background-image:url("img/water.jpg")}
 .svc.i-meetup .side{background-image:url("img/meetup.jpg")}
 .svc.i-office .side{background-image:url("img/office.jpg")}
-.svc.i-noren .side{background-image:url("img/noren.jpg");background-position:center top}
+.svc.i-noren .side{background-image:url("img/noren.jpg?v=3");background-position:center top}
 .svc .body{padding:32px 34px}
 .svc .hook{font-size:clamp(1.22rem,2.9vw,1.6rem);font-weight:900;color:var(--ink);line-height:1.55;margin-bottom:18px}
 .svc .hook em{font-style:normal;color:var(--main);font-family:"Inter","Noto Sans JP",sans-serif;font-size:1.5em;letter-spacing:-.01em;vertical-align:-.03em}
@@ -273,30 +273,14 @@ footer .flogo b{color:var(--ink);font-size:1.04rem}
 </head>
 <body>
 
-<!-- ロゴ定義（会社案内のロゴを実測した寸法で再現。黒=#201715／マルーン=#841B35） -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="tenplus-logo" viewBox="0 0 560 246">
-    <rect fill="#201715" x="0"   y="35"  width="84"  height="33"/>
-    <rect fill="#201715" x="88"  y="35"  width="49"  height="210"/>
-    <rect fill="#841b35" x="147" y="35"  width="40"  height="211"/>
-    <rect fill="#841b35" x="191" y="35"  width="84"  height="33"/>
-    <rect fill="#841b35" x="191" y="124" width="84"  height="32"/>
-    <rect fill="#841b35" x="191" y="213" width="84"  height="33"/>
-    <rect fill="#201715" x="286" y="35"  width="49"  height="210"/>
-    <rect fill="#201715" x="339" y="35"  width="107" height="33"/>
-    <rect fill="#201715" x="414" y="35"  width="32"  height="211"/>
-    <rect fill="#841b35" x="456" y="35"  width="104" height="34"/>
-    <rect fill="#841b35" x="491" y="0"   width="34"  height="104"/>
-  </symbol>
-</svg>
-
-<div id="intro"><div class="it"><svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><use href="#tenplus-logo"/></svg></div></div>
+<!-- ロゴ：会社案内のロゴを実測した寸法で再現。7・N=#201715／E・＋=#841B35。各所にインラインで記述（<use>だとブラウザによって色が落ちるため） -->
+<div id="intro"><div class="it"><svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><rect fill="#201715" x="0" y="35" width="84" height="33"/> <rect fill="#201715" x="88" y="35" width="49" height="210"/> <rect fill="#841b35" x="147" y="35" width="40" height="211"/> <rect fill="#841b35" x="191" y="35" width="84" height="33"/> <rect fill="#841b35" x="191" y="124" width="84" height="32"/> <rect fill="#841b35" x="191" y="213" width="84" height="33"/> <rect fill="#201715" x="286" y="35" width="49" height="210"/> <rect fill="#201715" x="339" y="35" width="107" height="33"/> <rect fill="#201715" x="414" y="35" width="32" height="211"/> <rect fill="#841b35" x="456" y="35" width="104" height="34"/> <rect fill="#841b35" x="491" y="0" width="34" height="104"/></svg></div></div>
 <div id="prog"></div>
 
 <header id="hd">
   <div class="wrap nav">
     <a class="brand" href="#hero" aria-label="株式会社テンプラス">
-      <svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><use href="#tenplus-logo"/></svg>
+      <svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><rect fill="#201715" x="0" y="35" width="84" height="33"/> <rect fill="#201715" x="88" y="35" width="49" height="210"/> <rect fill="#841b35" x="147" y="35" width="40" height="211"/> <rect fill="#841b35" x="191" y="35" width="84" height="33"/> <rect fill="#841b35" x="191" y="124" width="84" height="32"/> <rect fill="#841b35" x="191" y="213" width="84" height="33"/> <rect fill="#201715" x="286" y="35" width="49" height="210"/> <rect fill="#201715" x="339" y="35" width="107" height="33"/> <rect fill="#201715" x="414" y="35" width="32" height="211"/> <rect fill="#841b35" x="456" y="35" width="104" height="34"/> <rect fill="#841b35" x="491" y="0" width="34" height="104"/></svg>
       <span class="nm">株式会社テンプラス<small>SINCE 2001 ／ 25th ANNIVERSARY</small></span>
     </a>
     <nav class="nav-links">
@@ -766,7 +750,7 @@ footer .flogo b{color:var(--ink);font-size:1.04rem}
 </section>
 
 <footer>
-  <div class="flogo"><svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><use href="#tenplus-logo"/></svg><b>株式会社テンプラス</b></div>
+  <div class="flogo"><svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><rect fill="#201715" x="0" y="35" width="84" height="33"/> <rect fill="#201715" x="88" y="35" width="49" height="210"/> <rect fill="#841b35" x="147" y="35" width="40" height="211"/> <rect fill="#841b35" x="191" y="35" width="84" height="33"/> <rect fill="#841b35" x="191" y="124" width="84" height="32"/> <rect fill="#841b35" x="191" y="213" width="84" height="33"/> <rect fill="#201715" x="286" y="35" width="49" height="210"/> <rect fill="#201715" x="339" y="35" width="107" height="33"/> <rect fill="#201715" x="414" y="35" width="32" height="211"/> <rect fill="#841b35" x="456" y="35" width="104" height="34"/> <rect fill="#841b35" x="491" y="0" width="34" height="104"/></svg><b>株式会社テンプラス</b></div>
   経費の削減から、売上・集客アップのお手伝いまで。<br>
   掲載の価格・条件は2026年10月時点の目安です。最新の内容はお問い合わせください。<br>
   <span style="opacity:.75">サービス写真はイメージです。　このページは「ウェブのれん」で制作しています（制作：YoUday）。</span>
