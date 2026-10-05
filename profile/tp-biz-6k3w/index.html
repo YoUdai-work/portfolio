@@ -5,141 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>株式会社テンプラス｜経費のミナオシから、売上・集客アップまで。</title>
-<meta name="description" content="創業2001年、25年目。コピー用紙・ETC・燃料・印刷・水道から、交流会・レンタルオフィスまで。中小事業者の経費削減と集客をワンストップで。株式会社テンプラス。">
+<meta name="description" content="創業2001年、25周年。コスト削減実績多数。コピー用紙・ETC・燃料・印刷・水道から、交流会・レンタルオフィス・ホームページまで。中小事業者の経費削減と集客をワンストップで。株式会社テンプラス。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#16324f;      /* ブランド基調（既存プロフィールページと統一） */
-  --navy2:#1f4468;
-  --gold:#b39158;      /* 品格アクセント */
-  --red:#c8102e;       /* 数字・削減率の強調 */
-  --ink:#1c2a36;
-  --soft:#63737f;
-  --bg:#f7f6f3;
-  --bg2:#eef1f4;
-  --line:#e2e6ea;
-  --card:#fffefc;
+  --main:#841b35;      /* イメージカラー＝ロゴの「E」「＋」 */
+  --main-dk:#5f1226;
+  --main-lt:#f6e9ec;
+  --sub:#024800;       /* サブカラー＝濃い緑 */
+  --sub-dk:#013200;
+  --sub-lt:#e8f0e6;
+  --ink:#201715;       /* ロゴの黒 */
+  --soft:#5d5553;
+  --bg:#faf8f6;
+  --bg2:#f2efeb;
+  --line:#e4dfda;
+  --card:#ffffff;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 html,body{overflow-x:hidden;max-width:100%}
-body{font-family:"Inter","Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
+body{font-family:"Inter","Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.9;font-size:17px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 26px}
 .serif{font-family:"Noto Serif JP",serif}
-.en{font-size:.7rem;letter-spacing:.28em;color:var(--gold);font-weight:700;text-transform:uppercase}
+.en{font-size:.82rem;letter-spacing:.26em;color:var(--sub);font-weight:700;text-transform:uppercase}
+
+/* ===== logo（会社案内のロゴを実測して再現） ===== */
+.logo{display:block;height:34px;width:auto}
+.logo .k{fill:var(--ink)}
+.logo .r{fill:var(--main)}
 
 /* ===== intro ===== */
-#intro{position:fixed;inset:0;z-index:100;background:var(--navy);display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s}
+#intro{position:fixed;inset:0;z-index:100;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s}
 #intro.hide{opacity:0;visibility:hidden}
-#intro .it{overflow:hidden;text-align:center}
-#intro .it b{display:inline-block;color:#fff;font-size:clamp(1.5rem,5vw,2.7rem);font-weight:800;letter-spacing:.06em;transform:translateY(110%);animation:up 1s .15s cubic-bezier(.2,.8,.2,1) forwards}
-#intro .it b i{color:var(--gold);font-style:normal}
+#intro .it{overflow:hidden}
+#intro .it svg{height:clamp(56px,10vw,88px);width:auto;transform:translateY(110%);animation:up 1s .15s cubic-bezier(.2,.8,.2,1) forwards}
 
 /* ===== progress / header ===== */
-#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--navy),var(--gold));z-index:90;transition:width .1s}
-header{position:fixed;top:0;left:0;right:0;z-index:80;background:transparent;transition:.4s}
-header.solid{background:rgba(247,246,243,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
-/* 未スクロール時はヒーロー（濃紺）の上に重なるため白抜き。solid付与で通常配色へ戻す */
-.brand{font-weight:800;font-size:1.05rem;letter-spacing:.02em;color:#fff;white-space:nowrap;transition:color .4s}
-.brand i{color:var(--gold);font-style:normal;transition:color .4s}
-.brand small{display:block;font-size:.6rem;letter-spacing:.18em;color:#9fb4c8;font-weight:600;transition:color .4s}
-header.solid .brand{color:var(--navy)}
-header.solid .brand i{color:var(--red)}
-header.solid .brand small{color:var(--soft)}
-.nav-links{display:flex;gap:26px;font-size:.83rem;font-weight:600;color:#e2ebf3;transition:color .4s}
-header.solid .nav-links{color:var(--ink)}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--main),var(--sub));z-index:90;transition:width .1s}
+header{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.4s}
+header.solid{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(32,23,21,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.brand .nm{font-weight:900;font-size:1.12rem;letter-spacing:.04em;color:var(--ink);line-height:1.2}
+.brand .nm small{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--soft);font-weight:600}
+.nav-links{display:flex;gap:24px;font-size:.92rem;font-weight:700;color:var(--ink)}
 .nav-links a{position:relative;white-space:nowrap}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:.3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--main);transition:.3s}
 .nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--gold);color:#fff!important;padding:10px 20px;border-radius:8px;font-size:.8rem;font-weight:700;transition:.3s;white-space:nowrap}
-.nav-cta:hover{background:#c6a266;transform:translateY(-2px)}
-header.solid .nav-cta{background:var(--navy)}
-header.solid .nav-cta:hover{background:var(--gold)}
-@media(max-width:900px){.nav-links{display:none}}
+.nav-cta{background:var(--main);color:#fff!important;padding:11px 22px;border-radius:8px;font-size:.9rem;font-weight:700;transition:.3s;white-space:nowrap}
+.nav-cta:hover{background:var(--main-dk);transform:translateY(-2px)}
+@media(max-width:980px){.nav-links{display:none}}
+@media(max-width:520px){.brand{gap:10px}.brand .nm{font-size:.98rem}.brand .nm small{display:none}.logo{height:26px}.nav-cta{padding:10px 14px;font-size:.82rem}}
 
 /* ===== hero ===== */
-.hero{padding:170px 0 96px;position:relative;overflow:hidden;color:#fff;background:#12293f}
-/* 背景写真＋濃紺グラデーションで可読性を確保 */
-.hero .bg{position:absolute;inset:0;background:url("img/hero.jpg") center/cover no-repeat;opacity:.5}
-.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(12,32,50,.94) 0%,rgba(16,42,66,.82) 46%,rgba(20,58,92,.55) 100%)}
+.hero{padding:180px 0 104px;position:relative;overflow:hidden;color:#fff;background:var(--ink)}
+.hero .bg{position:absolute;inset:0;background:url("img/hero.jpg") center/cover no-repeat;opacity:.55}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(32,23,21,.95) 0%,rgba(32,23,21,.82) 45%,rgba(95,18,38,.55) 100%)}
 .hero .wrap{position:relative;z-index:2}
-.hero .float{position:absolute;border-radius:50%;filter:blur(3px);opacity:.22;animation:floaty 8s ease-in-out infinite;pointer-events:none;z-index:1}
-.hero .f1{width:380px;height:380px;background:radial-gradient(#8fb6dc,transparent 70%);top:20px;right:-90px}
-.hero .f2{width:240px;height:240px;background:radial-gradient(#d8b877,transparent 70%);bottom:-40px;left:38%;animation-delay:1.6s}
-.hero .badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.28);border-radius:100px;padding:7px 18px;font-size:.76rem;letter-spacing:.1em;color:#e6eef6;margin-bottom:26px}
-.hero .badge b{color:var(--gold);font-family:"Inter";font-weight:800}
-.kt .line{overflow:hidden;display:block}
-.kt .line span{display:inline-block;transform:translateY(115%);font-weight:800;font-size:clamp(1.85rem,5.6vw,3.5rem);line-height:1.28;letter-spacing:.01em}
-.kt em{font-style:normal;color:var(--gold)}
+.hero .badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.32);border-radius:100px;padding:8px 20px;font-size:.9rem;letter-spacing:.08em;color:#f1ebe8;margin-bottom:28px}
+.hero .badge b{color:#fff;background:var(--main);font-family:"Inter";font-weight:800;padding:0 9px;border-radius:4px}
+.kt .line{overflow:hidden;display:block;padding-bottom:4px}
+.kt .line span{display:inline-block;transform:translateY(115%);font-weight:900;font-size:clamp(2.1rem,6.2vw,4rem);line-height:1.3;letter-spacing:.01em}
+.kt em{font-style:normal;background:linear-gradient(transparent 58%,var(--main) 58%);padding:0 .08em}
 .play .kt .line span{animation:up 1.05s cubic-bezier(.2,.8,.2,1) forwards}
 .play .kt .line:nth-child(2) span{animation-delay:.12s}
-.play .kt .line:nth-child(3) span{animation-delay:.24s}
-.hero p.lead{margin-top:26px;font-size:1rem;color:#cfdcea;max-width:600px;opacity:0;transform:translateY(20px)}
+.hero p.lead{margin-top:28px;font-size:1.12rem;color:#e6dedb;max-width:640px;opacity:0;transform:translateY(20px)}
 .play p.lead{animation:up2 .9s .5s ease forwards}
-.hero-btns{margin-top:36px;display:flex;gap:13px;flex-wrap:wrap;opacity:0;transform:translateY(20px)}
+.hero-btns{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap;opacity:0;transform:translateY(20px)}
 .play .hero-btns{animation:up2 .9s .66s ease forwards}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:10px;font-weight:700;font-size:.94rem;transition:.28s}
-.btn-pri{background:var(--gold);color:#fff;box-shadow:0 12px 26px rgba(0,0,0,.22)}
-.btn-pri:hover{background:#c6a266;transform:translateY(-3px)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:17px 32px;border-radius:10px;font-weight:700;font-size:1.02rem;transition:.28s}
+.btn-pri{background:var(--main);color:#fff;box-shadow:0 12px 26px rgba(0,0,0,.25)}
+.btn-pri:hover{background:var(--main-dk);transform:translateY(-3px)}
 .btn-pri .ar{transition:.28s}.btn-pri:hover .ar{transform:translateX(5px)}
-.btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
-.scrollcue{margin-top:54px;font-size:.68rem;letter-spacing:.24em;color:#9fb4c8;display:flex;flex-direction:column;align-items:center;gap:6px;width:fit-content;opacity:0}
+.scrollcue{margin-top:56px;font-size:.76rem;letter-spacing:.24em;color:#bfb3af;display:flex;flex-direction:column;align-items:center;gap:6px;width:fit-content;opacity:0}
 .play .scrollcue{animation:up2 1s .9s ease forwards}
-.scrollcue .arrow{font-size:1.2rem;line-height:1;color:var(--gold);animation:bounce 1.6s ease-in-out infinite}
-@media(max-width:900px){.hero{padding:130px 0 74px}}
+.scrollcue .arrow{font-size:1.3rem;line-height:1;color:#fff;animation:bounce 1.6s ease-in-out infinite}
+@media(max-width:900px){.hero{padding:140px 0 80px}}
 
 /* ===== sections ===== */
-section{padding:88px 0;position:relative}
-.sec-head{margin-bottom:46px}
-.sec-head h2{font-size:clamp(1.5rem,3.8vw,2.15rem);font-weight:800;margin-top:8px;letter-spacing:.01em;color:var(--navy)}
-.sec-head p.desc{font-size:.92rem;color:var(--soft);margin-top:14px;max-width:660px}
+section{padding:96px 0;position:relative}
+.sec-head{margin-bottom:48px}
+.sec-head h2{font-size:clamp(1.75rem,4.2vw,2.5rem);font-weight:900;margin-top:8px;letter-spacing:.01em;color:var(--ink);line-height:1.45}
+.sec-head h2::after{content:"";display:block;width:44px;height:4px;background:var(--main);margin-top:16px;border-radius:2px}
+.sec-head p.desc{font-size:1.04rem;color:var(--soft);margin-top:18px;max-width:700px}
 .reveal{opacity:0;transform:translateY(34px);transition:.9s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
 
 /* ===== numbers ===== */
-.numbers{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}
+.numbers{background:#fff;border-bottom:1px solid var(--line);padding:68px 0}
 .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
-.num{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:28px 10px;transition:.3s}
-.num:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(22,50,79,.09)}
-.num b{font-family:"Inter";font-size:2.2rem;font-weight:800;color:var(--navy);display:block;line-height:1.1}
-.num b i{font-style:normal;color:var(--gold);font-size:.95rem;font-weight:700}
-.num span{font-size:.76rem;color:var(--soft);display:block;margin-top:8px;letter-spacing:.04em}
-@media(max-width:700px){.nums{grid-template-columns:1fr 1fr}}
+.num{background:var(--bg);border:1px solid var(--line);border-top:4px solid var(--main);border-radius:14px;padding:30px 10px 26px;transition:.3s}
+.num:nth-child(even){border-top-color:var(--sub)}
+.num:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(32,23,21,.08)}
+.num b{font-family:"Inter";font-size:2.6rem;font-weight:900;color:var(--ink);display:block;line-height:1.1}
+.num b i{font-style:normal;color:var(--main);font-size:1.05rem;font-weight:800;margin-left:2px}
+.num span{font-size:.92rem;color:var(--soft);display:block;margin-top:10px;line-height:1.6}
+.num span small{display:block;font-size:.78rem}
+@media(max-width:760px){.nums{grid-template-columns:1fr 1fr}.num b{font-size:2.1rem}}
 
 /* ===== problems ===== */
 .problems{background:var(--bg2)}
 .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.prob{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;position:relative}
-.prob .q{font-family:"Inter";font-size:1.5rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:12px;display:block}
-.prob h3{font-size:1rem;color:var(--navy);margin-bottom:6px}
-.prob p{font-size:.86rem;color:var(--soft)}
-.prob-answer{margin-top:34px;background:var(--navy);color:#fff;border-radius:16px;padding:32px 34px;text-align:center}
-.prob-answer .sm{font-size:.8rem;letter-spacing:.14em;color:#a8bdd2}
-.prob-answer b{display:block;font-size:clamp(1.15rem,3.2vw,1.6rem);margin:10px 0 8px;font-weight:800}
-.prob-answer b em{font-style:normal;color:var(--gold)}
-.prob-answer p{font-size:.88rem;color:#c6d5e3}
-@media(max-width:820px){.prob-grid{grid-template-columns:1fr}}
+.prob{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+.prob .q{font-family:"Inter";font-size:1.7rem;font-weight:900;color:var(--main);line-height:1;margin-bottom:14px;display:block}
+.prob h3{font-size:1.14rem;color:var(--ink);margin-bottom:8px;line-height:1.6}
+.prob p{font-size:.98rem;color:var(--soft)}
+.prob-answer{margin-top:36px;background:var(--sub);color:#fff;border-radius:16px;padding:38px 34px;text-align:center}
+.prob-answer .sm{font-size:.9rem;letter-spacing:.14em;color:#bcd3b8}
+.prob-answer b{display:block;font-size:clamp(1.3rem,3.6vw,1.85rem);margin:12px 0 10px;font-weight:900;line-height:1.55}
+.prob-answer b em{font-style:normal;background:linear-gradient(transparent 60%,var(--main) 60%)}
+.prob-answer p{font-size:1.02rem;color:#dce8d9}
+@media(max-width:860px){.prob-grid{grid-template-columns:1fr}}
 
 /* ===== service cards ===== */
-.svc-list{display:grid;gap:22px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.35s;display:grid;grid-template-columns:270px 1fr}
-.svc:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(22,50,79,.11)}
-/* 左パネル＝サービス写真。下半分に濃紺グラデをかけて見出しを載せる */
-.svc .side{position:relative;background:var(--navy) center/cover no-repeat;color:#fff;padding:28px 24px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:10px;min-height:340px;overflow:hidden}
-.svc .side::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,32,50,.12) 0%,rgba(12,32,50,.55) 46%,rgba(12,32,50,.93) 100%)}
+.svc-list{display:grid;gap:24px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.35s;display:grid;grid-template-columns:290px 1fr}
+.svc:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(32,23,21,.1)}
+.svc .side{position:relative;background:var(--ink) center/cover no-repeat;color:#fff;padding:30px 26px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:10px;min-height:360px;overflow:hidden}
+.svc .side::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(32,23,21,.08) 0%,rgba(32,23,21,.5) 48%,rgba(32,23,21,.93) 100%)}
+.svc .side::after{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:var(--main);z-index:2}
+.svc.g .side::after{background:var(--sub)}
 .svc .side>*{position:relative;z-index:2}
-.svc .side .ico{width:38px;height:38px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
-.svc .side .cat{font-size:.66rem;letter-spacing:.18em;color:#c3d4e2}
-.svc .side h3{font-size:1.2rem;font-weight:800;line-height:1.45;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-.svc .side .sub{font-size:.74rem;color:#c3d4e2;letter-spacing:.03em}
-/* 各サービスの写真 */
+.svc .side .ico{width:40px;height:40px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.svc .side .cat{font-size:.76rem;letter-spacing:.18em;color:#e2d9d6;font-weight:600}
+.svc .side h3{font-size:1.4rem;font-weight:900;line-height:1.45;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.svc .side .sub{font-size:.86rem;color:#e2d9d6;letter-spacing:.03em}
 .svc.i-paper .side{background-image:url("img/paper.jpg")}
 .svc.i-etc .side{background-image:url("img/etc.jpg")}
 .svc.i-fuel .side{background-image:url("img/fuel.jpg")}
@@ -147,123 +145,167 @@ section{padding:88px 0;position:relative}
 .svc.i-water .side{background-image:url("img/water.jpg")}
 .svc.i-meetup .side{background-image:url("img/meetup.jpg")}
 .svc.i-office .side{background-image:url("img/office.jpg")}
-.svc .body{padding:28px 30px}
-.svc .hook{font-size:clamp(1.05rem,2.6vw,1.35rem);font-weight:800;color:var(--navy);line-height:1.5;margin-bottom:14px}
-.svc .hook em{font-style:normal;color:var(--red);font-family:"Inter","Noto Sans JP",sans-serif;font-size:1.5em;letter-spacing:-.01em;vertical-align:-.03em}
-.svc ul{list-style:none;display:grid;gap:7px;margin-bottom:16px}
-.svc ul li{font-size:.88rem;color:var(--ink);padding-left:22px;position:relative}
-.svc ul li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:50%;border:2px solid var(--gold)}
-.pricebox{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--bg2);border-radius:10px;padding:12px 16px}
-.pricebox .pl{font-size:.72rem;color:var(--soft);letter-spacing:.08em;font-weight:700}
-.pricebox .pv{font-family:"Inter","Noto Sans JP",sans-serif;font-size:1.15rem;font-weight:800;color:var(--navy)}
-.pricebox .pv small{font-size:.72rem;font-weight:600;color:var(--soft)}
-.note{font-size:.74rem;color:var(--soft);margin-top:10px;line-height:1.75}
-.tagline{display:inline-block;background:var(--red);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:4px 11px;border-radius:4px;margin-bottom:12px}
-.tagline.g{background:var(--gold)}
-@media(max-width:820px){
+.svc.i-noren .side{background-image:url("img/noren.jpg");background-position:center top}
+.svc .body{padding:32px 34px}
+.svc .hook{font-size:clamp(1.22rem,2.9vw,1.6rem);font-weight:900;color:var(--ink);line-height:1.55;margin-bottom:18px}
+.svc .hook em{font-style:normal;color:var(--main);font-family:"Inter","Noto Sans JP",sans-serif;font-size:1.5em;letter-spacing:-.01em;vertical-align:-.03em}
+.svc ul{list-style:none;display:grid;gap:9px;margin-bottom:20px}
+.svc ul li{font-size:1rem;color:var(--ink);padding-left:24px;position:relative;line-height:1.75}
+.svc ul li::before{content:"";position:absolute;left:2px;top:.62em;width:10px;height:10px;border-radius:50%;border:2.5px solid var(--sub)}
+.pricebox{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;background:var(--bg2);border-left:4px solid var(--main);border-radius:0 10px 10px 0;padding:14px 18px}
+.pricebox+.pricebox{margin-top:8px}
+.pricebox .pl{font-size:.84rem;color:var(--soft);letter-spacing:.06em;font-weight:700}
+.pricebox .pv{font-family:"Inter","Noto Sans JP",sans-serif;font-size:1.3rem;font-weight:900;color:var(--ink);margin-right:10px}
+.pricebox .pv small{font-size:.8rem;font-weight:600;color:var(--soft)}
+.note{font-size:.86rem;color:var(--soft);margin-top:12px;line-height:1.8}
+.tagline{display:inline-block;background:var(--main);color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.08em;padding:5px 13px;border-radius:4px;margin-bottom:14px}
+.tagline.g{background:var(--sub)}
+.morelink{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--sub);color:#fff;font-weight:700;font-size:.96rem;padding:13px 24px;border-radius:9px;transition:.3s}
+.morelink:hover{background:var(--sub-dk);transform:translateY(-2px)}
+@media(max-width:860px){
   .svc{grid-template-columns:1fr}
-  .svc .side{flex-direction:row;align-items:flex-end;justify-content:flex-start;gap:14px;padding:18px 22px;min-height:170px;background-position:center 38%}
-  .svc .side::before{background:linear-gradient(180deg,rgba(12,32,50,.18) 0%,rgba(12,32,50,.62) 55%,rgba(12,32,50,.94) 100%)}
-  .svc .side .ico{width:30px;height:30px;flex-shrink:0;margin-bottom:2px}
+  .svc .side{flex-direction:row;align-items:flex-end;justify-content:flex-start;gap:14px;padding:20px 22px;min-height:190px;background-position:center 38%}
+  .svc .side .ico{width:32px;height:32px;flex-shrink:0;margin-bottom:3px}
   .svc .side .cat{display:none}
-  .svc .body{padding:24px 22px}
+  .svc .side h3{font-size:1.3rem}
+  .svc .body{padding:26px 22px}
+  .svc.i-noren .side{min-height:240px;background-position:center 12%}
 }
 
 /* ===== growth（集客） ===== */
 .growth{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.free9{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0 4px}
-.free9 span{background:#fff;border:1px solid var(--line);border-radius:8px;font-size:.74rem;text-align:center;padding:8px 4px;color:var(--navy);font-weight:600}
-@media(max-width:820px){.free9{grid-template-columns:repeat(3,1fr)}}
-.cities{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.cities span{border:1px solid var(--gold);color:var(--navy);border-radius:100px;font-size:.78rem;padding:4px 14px;font-weight:600;background:#fff}
+.free9{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:4px 0 18px}
+.free9 span{background:#fff;border:1px solid var(--line);border-radius:8px;font-size:.84rem;text-align:center;padding:9px 4px;color:var(--ink);font-weight:700;line-height:1.5}
+.free9 span.sp{background:var(--sub);color:#fff;border-color:var(--sub)}
+@media(max-width:860px){.free9{grid-template-columns:repeat(3,1fr)}}
+.cities{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.cities span{border:1.5px solid var(--sub);color:var(--sub);border-radius:100px;font-size:.88rem;padding:4px 15px;font-weight:700;background:#fff}
 
-/* ===== other depts ===== */
-.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.dept{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;transition:.3s}
-.dept:hover{border-color:var(--gold);transform:translateY(-4px)}
-.dept b{color:var(--navy);font-size:.98rem;display:block}
-.dept span{display:block;font-size:.82rem;color:var(--soft);margin-top:3px}
-@media(max-width:820px){.dept-grid{grid-template-columns:1fr}}
-.costlist{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px}
-.costlist p.t{font-size:.92rem;font-weight:700;color:var(--navy);margin-bottom:12px}
+/* ===== 実績 ===== */
+.results{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.res-head{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:30px}
+.res-k{background:var(--main-lt);border-radius:12px;padding:20px 22px}
+.res-k b{display:block;color:var(--main);font-size:1.12rem;margin-bottom:2px}
+.res-k span{font-size:.94rem;color:var(--soft)}
+.clients{display:flex;flex-wrap:wrap;gap:8px}
+.clients span{background:var(--bg);border:1px solid var(--line);border-radius:6px;font-size:.9rem;padding:6px 13px;color:var(--ink);line-height:1.5}
+.clients span.all{background:var(--sub);color:#fff;border-color:var(--sub);font-weight:700}
+@media(max-width:860px){.res-head{grid-template-columns:1fr}}
+
+/* ===== 事業内容 ===== */
+.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dept{background:#fff;border:1px solid var(--line);border-top:4px solid var(--main);border-radius:12px;padding:24px 24px 22px;transition:.3s}
+.dept:nth-child(even){border-top-color:var(--sub)}
+.dept:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(32,23,21,.08)}
+.dept>b{color:var(--ink);font-size:1.14rem;display:block;margin-bottom:6px}
+.dept span b{color:var(--main)}
+.dept span{display:block;font-size:.94rem;color:var(--soft);line-height:1.75}
+@media(max-width:860px){.dept-grid{grid-template-columns:1fr}}
+.costlist{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px}
+.costlist p.t{font-size:1.06rem;font-weight:700;color:var(--ink);margin-bottom:14px}
 .costlist .chips{display:flex;flex-wrap:wrap;gap:8px}
-.costlist .chips span{background:var(--bg2);border-radius:6px;font-size:.8rem;padding:5px 12px;color:var(--ink)}
+.costlist .chips span{background:var(--sub-lt);color:var(--sub-dk);border-radius:6px;font-size:.92rem;padding:6px 13px;font-weight:600}
 
 /* ===== flow ===== */
 .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:f}
-.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 18px;position:relative;text-align:center}
-.step::before{counter-increment:f;content:"0" counter(f);font-family:"Inter";font-size:.78rem;font-weight:800;color:var(--gold);letter-spacing:.14em;display:block;margin-bottom:8px}
-.step h3{font-size:.95rem;color:var(--navy);margin-bottom:5px}
-.step p{font-size:.78rem;color:var(--soft);line-height:1.7}
-@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.flow{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 18px;text-align:center}
+.step::before{counter-increment:f;content:"0" counter(f);font-family:"Inter";font-size:1rem;font-weight:900;color:#fff;background:var(--main);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.step:nth-child(even)::before{background:var(--sub)}
+.step h3{font-size:1.06rem;color:var(--ink);margin-bottom:6px}
+.step p{font-size:.9rem;color:var(--soft);line-height:1.75}
+@media(max-width:960px){.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.flow{grid-template-columns:1fr}}
 
 /* ===== CEO ===== */
 .ceo{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.ceo-card{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:center}
-.ceo-ph{aspect-ratio:1;border-radius:18px;background:linear-gradient(150deg,var(--navy),var(--navy2));display:flex;align-items:center;justify-content:center;color:#fff;position:relative;overflow:hidden}
-.ceo-ph .kanji{font-family:"Noto Serif JP",serif;font-size:5rem;font-weight:700;color:rgba(255,255,255,.9)}
-.ceo-ph .ring{position:absolute;inset:16px;border:1px solid var(--gold);border-radius:12px}
-.ceo-tx .role{font-size:.78rem;letter-spacing:.12em;color:var(--soft)}
-.ceo-tx h3{font-size:1.7rem;margin:4px 0 2px;color:var(--navy)}
-.ceo-tx .yomi{font-size:.72rem;letter-spacing:.14em;color:var(--gold);margin-bottom:16px}
-.ceo-tx .q{font-family:"Noto Serif JP",serif;font-size:1.2rem;color:var(--navy);border-left:4px solid var(--gold);padding-left:16px;margin-bottom:14px;line-height:1.7}
-.ceo-tx p{font-size:.9rem;color:var(--soft);margin-bottom:20px}
-.linkbtn{display:inline-flex;align-items:center;gap:9px;border:1.5px solid var(--navy);color:var(--navy);border-radius:10px;padding:13px 26px;font-weight:700;font-size:.9rem;transition:.3s}
-.linkbtn:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
+.ceo-card{display:grid;grid-template-columns:280px 1fr;gap:44px;align-items:center}
+.ceo-ph{position:relative;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 0 0 3px var(--main),0 20px 40px rgba(32,23,21,.15)}
+.ceo-ph img{width:100%;height:100%;object-fit:cover;object-position:40% 40%}
+.ceo-tx .role{font-size:.92rem;letter-spacing:.1em;color:var(--soft)}
+.ceo-tx h3{font-size:2rem;margin:4px 0 2px;color:var(--ink)}
+.ceo-tx .yomi{font-size:.82rem;letter-spacing:.16em;color:var(--sub);font-weight:700;margin-bottom:18px}
+.ceo-tx .q{font-family:"Noto Serif JP",serif;font-size:1.4rem;color:var(--main);border-left:5px solid var(--main);padding-left:18px;margin-bottom:16px;line-height:1.7}
+.ceo-tx p{font-size:1.02rem;color:var(--soft);margin-bottom:22px}
+.linkbtn{display:inline-flex;align-items:center;gap:9px;border:2px solid var(--main);color:var(--main);border-radius:10px;padding:14px 28px;font-weight:700;font-size:1rem;transition:.3s}
+.linkbtn:hover{background:var(--main);color:#fff;transform:translateY(-3px)}
 .linkbtn .ar{transition:.3s}.linkbtn:hover .ar{transform:translateX(5px)}
-@media(max-width:820px){.ceo-card{grid-template-columns:1fr;gap:24px}.ceo-ph{max-width:200px}}
+@media(max-width:860px){.ceo-card{grid-template-columns:1fr;gap:26px;justify-items:start}.ceo-ph{width:220px}}
 
 /* ===== company ===== */
-.cominfo{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-.tbl{width:100%;border-collapse:collapse;font-size:.87rem}
-.tbl th,.tbl td{text-align:left;padding:13px 6px;border-bottom:1px solid var(--line);vertical-align:top}
-.tbl th{color:var(--navy);font-weight:700;width:104px;white-space:nowrap}
+.cominfo{display:grid;grid-template-columns:1.1fr .9fr;gap:34px}
+.tbl{width:100%;border-collapse:collapse;font-size:.98rem}
+.tbl th,.tbl td{text-align:left;padding:15px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{color:var(--main);font-weight:700;width:112px;white-space:nowrap}
 .tbl td{color:var(--ink)}
+.tbl td a{color:var(--sub);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .offices{display:grid;gap:10px}
-.office{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px}
-.office b{color:var(--navy);font-size:.92rem}
-.office span{display:block;font-size:.82rem;color:var(--soft);margin-top:2px}
-.office.soon{border-left-color:var(--soft);background:var(--bg2)}
-.office.soon b::after{content:"準備中";background:var(--soft);color:#fff;font-size:.64rem;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:9px;vertical-align:1px;letter-spacing:.06em}
-@media(max-width:820px){.cominfo{grid-template-columns:1fr}}
+.office{background:#fff;border:1px solid var(--line);border-left:4px solid var(--sub);border-radius:0 10px 10px 0;padding:15px 18px}
+.office b{color:var(--ink);font-size:1.02rem}
+.office span{display:block;font-size:.92rem;color:var(--soft);margin-top:2px}
+.office.main{border-left-color:var(--main)}
+.office.soon{border-left-color:#b8b0ac;background:var(--bg2)}
+.office.soon b::after{content:"準備中";background:#8a807c;color:#fff;font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:4px;margin-left:9px;vertical-align:2px;letter-spacing:.06em}
+@media(max-width:860px){.cominfo{grid-template-columns:1fr}}
 
 /* ===== contact ===== */
-.contact{background:var(--navy);color:#fff;text-align:center}
-.contact .en{color:var(--gold)}
-.contact h2{font-size:clamp(1.6rem,4.6vw,2.5rem);font-weight:800;margin:12px 0 16px}
-.contact p.lead{color:#b9cbdb;max-width:560px;margin:0 auto 32px;font-size:.94rem}
-.ctel{display:inline-block;margin-bottom:26px}
-.ctel small{display:block;font-size:.72rem;letter-spacing:.16em;color:#9fb4c8;margin-bottom:4px}
-.ctel b{font-family:"Inter";font-size:clamp(1.8rem,6vw,2.7rem);font-weight:800;color:#fff;letter-spacing:.01em;transition:.3s}
-.ctel:hover b{color:var(--gold)}
-.ctel span{display:block;font-size:.74rem;color:#9fb4c8;margin-top:4px}
+.contact{background:var(--sub);color:#fff;text-align:center}
+.contact .en{color:#bcd3b8}
+.contact h2{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;margin:12px 0 18px}
+.contact p.lead{color:#dce8d9;max-width:600px;margin:0 auto 34px;font-size:1.06rem}
+.ctel{display:inline-block;margin-bottom:28px}
+.ctel small{display:block;font-size:.84rem;letter-spacing:.16em;color:#bcd3b8;margin-bottom:4px}
+.ctel b{font-family:"Inter";font-size:clamp(2.1rem,7vw,3.1rem);font-weight:900;color:#fff;letter-spacing:.01em;transition:.3s}
+.ctel:hover b{opacity:.85}
+.ctel span{display:block;font-size:.88rem;color:#bcd3b8;margin-top:4px}
 .cbtns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
-.contact .btn-ghost{border-color:#3f5d7c;color:#dbe6f0}
-.contact .btn-ghost:hover{border-color:#fff;color:#fff}
-footer{background:#0f2438;color:#7d90a3;text-align:center;padding:34px 24px;font-size:.76rem;line-height:1.9;border-top:1px solid #1c3a55}
-footer b{color:#cfdae5}
+.contact .btn-pri{background:#fff;color:var(--main)}
+.contact .btn-pri:hover{background:var(--main-lt)}
+.contact .btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+footer{background:#fff;color:var(--soft);text-align:center;padding:40px 24px;font-size:.86rem;line-height:1.95;border-top:4px solid var(--main)}
+footer .flogo{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px}
+footer .flogo .logo{height:30px}
+footer .flogo b{color:var(--ink);font-size:1.04rem}
 
 @keyframes up{to{transform:translateY(0)}}
 @keyframes up2{to{opacity:1;transform:none}}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
 @keyframes bounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(8px);opacity:1}}
+@media(max-width:600px){body{font-size:16px}section{padding:72px 0}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
 
-<div id="intro"><div class="it"><b>TENPLUS<i>+</i></b></div></div>
+<!-- ロゴ定義（会社案内のロゴを実測した寸法で再現。黒=#201715／マルーン=#841B35） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tenplus-logo" viewBox="0 0 560 246">
+    <rect class="k" x="0"   y="35"  width="84"  height="33"/>
+    <rect class="k" x="88"  y="35"  width="49"  height="210"/>
+    <rect class="r" x="147" y="35"  width="40"  height="211"/>
+    <rect class="r" x="191" y="35"  width="84"  height="33"/>
+    <rect class="r" x="191" y="124" width="84"  height="32"/>
+    <rect class="r" x="191" y="213" width="84"  height="33"/>
+    <rect class="k" x="286" y="35"  width="49"  height="210"/>
+    <rect class="k" x="339" y="35"  width="107" height="33"/>
+    <rect class="k" x="414" y="35"  width="32"  height="211"/>
+    <rect class="r" x="456" y="35"  width="104" height="34"/>
+    <rect class="r" x="491" y="0"   width="34"  height="104"/>
+  </symbol>
+</svg>
+
+<div id="intro"><div class="it"><svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><use href="#tenplus-logo"/></svg></div></div>
 <div id="prog"></div>
 
 <header id="hd">
   <div class="wrap nav">
-    <div class="brand">株式会社テンプラス<i>＋</i><small>TENPLUS SINCE 2001</small></div>
+    <a class="brand" href="#hero" aria-label="株式会社テンプラス">
+      <svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><use href="#tenplus-logo"/></svg>
+      <span class="nm">株式会社テンプラス<small>SINCE 2001 ／ 25th ANNIVERSARY</small></span>
+    </a>
     <nav class="nav-links">
       <a href="#reduce">経費削減</a>
       <a href="#growth">集客・売上</a>
-      <a href="#depts">事業部一覧</a>
-      <a href="#flow">ご利用の流れ</a>
+      <a href="#results">実績</a>
+      <a href="#depts">事業内容</a>
       <a href="#company">会社概要</a>
     </nav>
     <a href="#contact" class="nav-cta">お問い合わせ</a>
@@ -273,9 +315,8 @@ footer b{color:#cfdae5}
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
   <div class="bg"></div>
-  <div class="float f1"></div><div class="float f2"></div>
   <div class="wrap">
-    <span class="badge">おかげさまで<b>25</b>年　／　創業 2001年</span>
+    <span class="badge">おかげさまで <b>25</b> 周年　／　創業 2001年</span>
     <h1 class="kt">
       <span class="line"><span>経費の<em>ミナオシ</em>から、</span></span>
       <span class="line"><span>売上・集客アップまで。</span></span>
@@ -293,10 +334,10 @@ footer b{color:#cfdae5}
 <div class="numbers">
   <div class="wrap">
     <div class="nums">
-      <div class="num reveal"><b>25<i>年目</i></b><span>2001年の創業から</span></div>
+      <div class="num reveal"><b>25<i>周年</i></b><span>2001年9月1日 設立</span></div>
       <div class="num reveal d1"><b>5,000<i>社</i></b><span>コスト削減の実績</span></div>
       <div class="num reveal d2"><b>80,000<i>人+</i></b><span>交流会の延べ参加者</span></div>
-      <div class="num reveal d3"><b>5<i>拠点</i></b><span>大阪・名古屋・四国・熊本・沖縄</span></div>
+      <div class="num reveal d3"><b>395<i>台</i></b><span>AEDの無料設置<small>（2024年3月現在）</small></span></div>
     </div>
   </div>
 </div>
@@ -380,10 +421,8 @@ footer b{color:#cfdae5}
             <li>法人・自営業者様に限定したサービスです</li>
           </ul>
           <div class="pricebox">
-            <span class="pl">出資金</span>
-            <span class="pv">¥10,000 <small>（脱会時にご返金）</small></span>
-            <span class="pl" style="margin-left:8px">組合費</span>
-            <span class="pv">無料</span>
+            <span class="pl">出資金</span><span class="pv">¥10,000 <small>（脱会時にご返金）</small></span>
+            <span class="pl">組合費</span><span class="pv">無料</span>
           </div>
           <p class="note">※ 組合費無料は、平均単価2,500円以上の法人様に限ります。<br>※ カード発行のお申し込み・審査には所定の手続きが必要です。</p>
         </div>
@@ -411,12 +450,9 @@ footer b{color:#cfdae5}
             <li>盗難・紛失保険に加入済み。一括後払いのご請求で、保証金も不要</li>
           </ul>
           <div class="pricebox">
-            <span class="pl">初期費用</span>
-            <span class="pv">¥10,000 <small>（税別／初回のみ）</small></span>
-            <span class="pl" style="margin-left:8px">取扱手数料</span>
-            <span class="pv">¥5,000 <small>（税別／初回のみ）</small></span>
-            <span class="pl" style="margin-left:8px">組合年会費</span>
-            <span class="pv">無料</span>
+            <span class="pl">初期費用</span><span class="pv">¥10,000 <small>（税別／初回のみ）</small></span>
+            <span class="pl">取扱手数料</span><span class="pv">¥5,000 <small>（税別／初回のみ）</small></span>
+            <span class="pl">組合年会費</span><span class="pv">無料</span>
           </div>
           <p class="note">※ エネオスカードは、高速道路上のスタンドにつきましては割引対象外です。<br>※ 盗難・紛失時の再発行には事務手数料がかかる場合がございます。</p>
         </div>
@@ -443,12 +479,10 @@ footer b{color:#cfdae5}
             <li>チラシ・POP・メニュー・教材・テスト用紙など、カラー印刷を気にせず使えます</li>
           </ul>
           <div class="pricebox">
-            <span class="pl">H-A4 インク使い放題</span>
-            <span class="pv">月額 ¥14,800 <small>（税込 ¥15,984）</small></span>
+            <span class="pl">H-A4 インク使い放題</span><span class="pv">月額 ¥14,800 <small>（税込 ¥15,984）</small></span>
           </div>
-          <div class="pricebox" style="margin-top:8px">
-            <span class="pl">H86-A4 複合機</span>
-            <span class="pv">月額 ¥19,000 <small>（税込 ¥20,520）</small></span>
+          <div class="pricebox">
+            <span class="pl">H86-A4 複合機</span><span class="pv">月額 ¥19,000 <small>（税込 ¥20,520）</small></span>
           </div>
           <p class="note">※ インク限定モデル（H-A4 ¥7,000／H86-A4 ¥9,500・いずれも税別）もございます。<br>※ 年間50,000枚までの使用の場合。お客様起因でない障害はプリンターを無償交換いたします。</p>
         </div>
@@ -475,10 +509,8 @@ footer b{color:#cfdae5}
             <li>飲食店・FC店・パチンコ・カラオケ店・公共施設・マンションオーナー様に多数ご利用いただいています</li>
           </ul>
           <div class="pricebox">
-            <span class="pl">定価</span>
-            <span class="pv">¥4,500 <small>（税込／1台）</small></span>
-            <span class="pl" style="margin-left:8px">一般家庭の目安</span>
-            <span class="pv">年間 約20,000円 <small>の節約</small></span>
+            <span class="pl">定価</span><span class="pv">¥4,500 <small>（税込／1台）</small></span>
+            <span class="pl">一般家庭の目安</span><span class="pv">年間 約20,000円 <small>の節約</small></span>
           </div>
           <p class="note">※ 一般家庭（4人家族・東京23区）で年間54㎥の節水となる場合の試算です。ご使用状況により効果は変動します。<br>※ タンクがない場合、タンクが高所にある場合、ボタン式のトイレ、節水機能付きタンクには取付できません。</p>
         </div>
@@ -494,13 +526,13 @@ footer b{color:#cfdae5}
     <div class="sec-head reveal">
       <p class="en">Business Growth</p>
       <h2>集客・売上アップ</h2>
-      <p class="desc">経費を減らすだけでは、会社は伸びません。テンプラスは「新しい出会い」と「事業を始める場所」もご用意しています。</p>
+      <p class="desc">経費を減らすだけでは、会社は伸びません。テンプラスは「新しい出会い」「事業を始める場所」、そして「お店の入口になるホームページ」もご用意しています。</p>
     </div>
 
     <div class="svc-list">
 
       <!-- 交流会 -->
-      <div class="svc i-meetup reveal">
+      <div class="svc g i-meetup reveal">
         <div class="side">
           <svg class="ico" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17.5" cy="9.5" r="2.4"/><path d="M15.5 20a5 5 0 0 1 6.5-4.8"/></svg>
           <div>
@@ -521,17 +553,15 @@ footer b{color:#cfdae5}
             <li>クレーム・迷惑な勧誘行為は主催者が厳格に対応。安心してご参加いただけます</li>
           </ul>
           <div class="pricebox">
-            <span class="pl">参加費</span>
-            <span class="pv">¥2,000 <small>（税込／通常 ¥2,500・割引特典開催中）</small></span>
-            <span class="pl" style="margin-left:8px">所要</span>
-            <span class="pv">75〜90分</span>
+            <span class="pl">参加費</span><span class="pv">¥2,000 <small>（税込／通常 ¥2,500・割引特典開催中）</small></span>
+            <span class="pl">所要</span><span class="pv">75〜90分</span>
           </div>
           <p class="note">※ 開催日程・会場は都市ごとに異なります。最新の日程は交流会サイト（kouryukai.tv）をご覧ください。<br>※ お持ち物＝名刺20枚程度。会場によりお茶・ソフトドリンク付き。</p>
         </div>
       </div>
 
       <!-- レンタルオフィス -->
-      <div class="svc i-office reveal">
+      <div class="svc g i-office reveal">
         <div class="side">
           <svg class="ico" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V6a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v15"/><path d="M14 21V10h4a1 1 0 0 1 1 1v10"/><path d="M8 9h3M8 13h3M8 17h3"/></svg>
           <div>
@@ -545,7 +575,7 @@ footer b{color:#cfdae5}
           <p class="hook">名古屋 伏見で、月<em>20,000</em>円〜。<br>ノートパソコン1台で、オフィスが持てます。</p>
           <div class="free9">
             <span>保証金 無料</span><span>共益費 無料</span><span>机・椅子 無料</span><span>水道光熱費 無料</span><span>ロッカー 無料</span>
-            <span>カラー印刷代 無料</span><span>ネット環境 無料</span><span>冷蔵庫・レンジ 無料</span><span>フリースペース・<br>会議室 無料</span><span style="background:var(--gold);color:#fff;border-color:var(--gold)">交流会 金券<br>5枚/月</span>
+            <span>カラー印刷代 無料</span><span>ネット環境 無料</span><span>冷蔵庫・レンジ 無料</span><span>会議室 無料</span><span class="sp">交流会 金券<br>5枚/月</span>
           </div>
           <ul>
             <li>伏見駅 徒歩5分・名古屋駅 徒歩9分。<b>最寄り5駅</b>が使え、東海圏全域へアクセス抜群</li>
@@ -554,12 +584,41 @@ footer b{color:#cfdae5}
             <li>セキュリティ完備・清潔で快適なオフィス環境。個室オフィス／会議室／共用ラウンジをご用意</li>
           </ul>
           <div class="pricebox">
-            <span class="pl">月額</span>
-            <span class="pv">¥20,000〜 <small>（税別）</small></span>
-            <span class="pl" style="margin-left:8px">初期登録料</span>
-            <span class="pv">¥60,000 <small>（税別／ご入室時）</small></span>
+            <span class="pl">月額</span><span class="pv">¥20,000〜 <small>（税別）</small></span>
+            <span class="pl">初期登録料</span><span class="pv">¥60,000 <small>（税別／ご入室時）</small></span>
           </div>
           <p class="note">※ 会議室・フリースペースは時間制限あり・予約制です。<br>※ 空室状況は時期により変動します。まずはお問い合わせください。</p>
+        </div>
+      </div>
+
+      <!-- ウェブのれん（提携サービス） -->
+      <div class="svc g i-noren reveal">
+        <div class="side">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.2"/><path d="M10.5 18.5h3"/><path d="M8.5 6.5h7v6h-7z"/></svg>
+          <div>
+            <p class="cat">SERVICE 08</p>
+            <h3>ホームページ制作</h3>
+            <p class="sub">ウェブのれん（提携：YoUday）</p>
+          </div>
+        </div>
+        <div class="body">
+          <span class="tagline g">このページも、ウェブのれんです</span>
+          <p class="hook">スマホで見やすい1ページのホームページを、<br>月<em>1,980</em>円から。</p>
+          <ul>
+            <li>お店・会社の「入口」になる、スマホ前提の1ページホームページ</li>
+            <li>名刺やチラシに載せられる<b>QRコード付き</b>。URLとQRコードは継続して保証します</li>
+            <li>会社の強み・実績・サービスを、読みやすい1本のページに整理して制作</li>
+            <li>ホームページがない、古いまま更新できていない、という方の最初の一歩に</li>
+            <li>いまご覧の<b>株式会社テンプラスのご紹介ページも、ウェブのれんで制作</b>しています</li>
+          </ul>
+          <div class="pricebox">
+            <span class="pl">導入価格（先着8件）</span><span class="pv">初期 ¥24,800 ＋ 月 ¥1,980</span>
+          </div>
+          <div class="pricebox">
+            <span class="pl">通常価格</span><span class="pv">初期 ¥49,800 ＋ 月 ¥2,980</span>
+          </div>
+          <p class="note">※ 制作・運営は提携先の YoUday（ユーデイ）が担当します。テンプラスからのご紹介としてお受けしています。<br>※ 詳しい内容・お申し込みの流れは、下記のページまたはテンプラスまでお問い合わせください。</p>
+          <a class="morelink" href="https://youday-yamato.com/" target="_blank" rel="noopener">ウェブのれんの詳細を見る <span>→</span></a>
         </div>
       </div>
 
@@ -567,26 +626,46 @@ footer b{color:#cfdae5}
   </div>
 </section>
 
-<!-- ============ 事業部一覧 ============ -->
+<!-- ============ 実績 ============ -->
+<section id="results" class="results">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="en">Results</p>
+      <h2>コスト削減の実績</h2>
+      <p class="desc">医療法人・保育園から、大手飲食チェーン、ホテル、通信、金融まで。業種も規模も問わず、多くの企業様の経費を見直してきました。</p>
+    </div>
+    <div class="res-head reveal">
+      <div class="res-k"><b>医療・福祉</b><span>医療法人・歯科・診療所・保育園</span></div>
+      <div class="res-k"><b>飲食・サービス</b><span>全国チェーンの飲食店・ホテル・カラオケ・スポーツ</span></div>
+      <div class="res-k"><b>企業・団体</b><span>メーカー・金融・通信ショップ・協同組合</span></div>
+    </div>
+    <div class="clients reveal d1">
+      <span>医療法人神明会</span><span>医療法人松徳会</span><span>医療法人アムス</span><span>医療法人シロアム会</span><span>医療法人大阪愛心会</span><span>さわやか歯科</span><span>箕面ビール</span><span>三洋電機</span><span>呉診療所</span><span>コーワ21</span><span>田島商事</span><span>シンワオックス</span><span>ナビック</span><span>カトープレジャーグループ</span><span>ニッセン</span><span>贔屓屋</span><span>ドコモ・au・SoftBank 各ショップ</span><span>いるか保育園</span><span>コムズ</span><span>全郵協</span><span>LEE</span><span>エミール</span><span>カラオケライブ</span><span>学光社</span><span>あんま屋本舗</span><span>ベストサービス</span><span>JBC大阪</span><span>プルデンシャル生命</span><span>ダイアパレス</span><span>シャロン</span><span>モンテローザ</span><span>ベル</span><span>養老の滝</span><span>長浜ラーメン</span><span>ロイヤルホスト</span><span>スズキ特販</span><span>サロンドケイ</span><span>DDN</span><span>はんこ屋さん21</span><span>東洋紙業</span><span>KANSAI</span><span>雪花</span><span>太陽乳業協同組合</span><span>ゲストグループ</span><span>岡島新聞本舗</span><span>焼肉屋さかい</span><span>牛角</span><span>テレコム阪神</span><span>サンマルク</span><span>心屋</span><span>がんこ</span><span>鵜舞屋</span><span>TSUTAYA</span><span>UMIYA</span><span>AEDサポートセンター</span><span>FP総合研究所</span><span>ケイツープリント</span><span>三井住友カード</span><span>猿カフェ</span><span>クラブBANK</span><span>西日本カイロプラクティック共同組合</span><span>前田学習塾</span><span>鳥貴族</span><span>大阪王将</span><span>京都王将</span><span>天下一品</span><span>つるとんたん</span><span>すかいらーく</span><span>コナミスポーツ</span><span>USEN</span><span>英会話ジオス</span><span>英会話NOVA</span><span>ウィークリーマンション東京</span><span>モスバーガー</span><span>高末</span><span>渋谷肉横丁</span><span>シンコースポーツ</span><span>天保山観光協会</span><span>蓬莱本館</span><span>リーフラス</span><span>ワーナーマイカルシネマズ</span><span>函太郎</span><span>BTS</span><span>石垣リゾートホテル</span><span>オズベルトホテルズ</span><span>社会保険労務士法人アイワークス</span><span>ジャパンメンテナンス</span><span class="all">全国の飲食店様</span>
+    </div>
+    <p class="note reveal d2">※ 会社案内記載のコスト削減実績より（順不同・敬称略）。</p>
+  </div>
+</section>
+
+<!-- ============ 事業内容 ============ -->
 <section id="depts">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="en">Divisions</p>
-      <h2>その他の事業部</h2>
-      <p class="desc">「経費の削減」から「売上・集客アップ」まで。中小事業者の困りごとをまとめて解決する事業部を揃えています。</p>
+      <p class="en">Business</p>
+      <h2>事業内容</h2>
+      <p class="desc">「経費の削減」から「起業・集客・地域貢献」まで。6つの事業で、中小事業者の困りごとをまとめて解決します。</p>
     </div>
     <div class="dept-grid">
-      <div class="dept reveal"><b>WEBプラス</b><span>ホームページ制作・Web活用支援</span></div>
-      <div class="dept reveal d1"><b>動画プラス</b><span>PR動画・プロモーション動画の制作</span></div>
-      <div class="dept reveal d2"><b>交流会プラス</b><span>全国の異業種交流会（フレンドリンク）</span></div>
-      <div class="dept reveal"><b>印刷プラス</b><span>名刺・チラシ等の印刷</span></div>
-      <div class="dept reveal d1"><b>飲食店プラス</b><span>飲食店の集客・運営サポート</span></div>
-      <div class="dept reveal d2"><b>起業プラス</b><span>これから起業する方の支援</span></div>
+      <div class="dept reveal"><b>テンプラス事業</b><span>経費の削減。電気・ガス・水道・携帯・通信費・WEB維持費・カード手数料率・文房具消耗品・ETC・ガソリン代、店内音楽放送代・DM代の削減、節水器ロスカット。</span></div>
+      <div class="dept reveal d1"><b>起業プラス事業</b><span>レンタルオフィス（東京・名古屋・大阪・博多・沖縄）。テンプラス税理士事務所・社労士事務所・行政書士事務所による起業支援。</span></div>
+      <div class="dept reveal d2"><b>交流会プラス事業</b><span>異業種交流会「フレンドリンク」を全国で開催。2001年から続く、日本イチの歴史を持つビジネス交流会。</span></div>
+      <div class="dept reveal"><b>WEBプラス事業</b><span>PUSHPLUS 最強集客サービス、アプリ・PR動画・VR制作、コストネット購買サービス、商売繁盛＋パッケージ。</span></div>
+      <div class="dept reveal d1"><b>印刷プラス事業</b><span>名刺制作（デザイン無料）、A4チラシ制作（2,000枚 7,990円〜）、カラー印刷し放題（7,000円〜／月）、日本イチ安いコピー用紙。</span></div>
+      <div class="dept reveal d2"><b>AEDプラス事業</b><span>AED普及活動・無料設置（<b>395台</b>・2024年3月現在）、東北AED100プロジェクト、AEDの販売・レンタル・リース。</span></div>
     </div>
     <div class="costlist reveal d1">
       <p class="t">こんな経費も、見直しの対象です。</p>
       <div class="chips">
-        <span>テナント代・オフィス家賃</span><span>電気代</span><span>ガス代・LPガス代</span><span>水道代</span><span>通信費</span><span>携帯代</span><span>カード手数料</span><span>広告費・DM代</span><span>ホームページ</span><span>AEDの無償寄贈</span>
+        <span>電気代</span><span>ガス代</span><span>水道代</span><span>携帯代・スマホ代</span><span>通信費</span><span>WEB維持費</span><span>カード手数料率</span><span>文房具・消耗品</span><span>ETC代</span><span>ガソリン代</span><span>店内音楽放送代</span><span>DM代</span>
       </div>
       <p class="note">気になる項目があれば、まずは現在の請求書をお見せください。適正かどうかを診断し、見直せる部分をご提案します。</p>
     </div>
@@ -619,7 +698,7 @@ footer b{color:#cfdae5}
       <h2>代表のご紹介</h2>
     </div>
     <div class="ceo-card reveal d1">
-      <div class="ceo-ph"><span class="ring"></span><span class="kanji">保</span></div>
+      <div class="ceo-ph"><img src="img/ceo.jpg" alt="代表取締役社長 保 喜博" loading="lazy"></div>
       <div class="ceo-tx">
         <p class="role">株式会社テンプラス 代表取締役社長</p>
         <h3 class="serif">保 喜博</h3>
@@ -642,21 +721,22 @@ footer b{color:#cfdae5}
     <div class="cominfo">
       <div class="reveal">
         <table class="tbl">
-          <tr><th>社名</th><td>株式会社テンプラス（TENPLUS）</td></tr>
-          <tr><th>創業</th><td>2001年（25年目）</td></tr>
-          <tr><th>代表者</th><td>代表取締役社長　保 喜博</td></tr>
+          <tr><th>社名</th><td>株式会社テンプラス（TEN+ Corporation）</td></tr>
+          <tr><th>設立</th><td>2001年9月1日（おかげさまで25周年）</td></tr>
+          <tr><th>代表者</th><td>代表取締役社長　保 喜博（たもつ よしひろ）</td></tr>
+          <tr><th>資本金</th><td>1,000万円</td></tr>
           <tr><th>本社</th><td>〒552-0021　大阪市港区築港3-8-2-2F</td></tr>
-          <tr><th>事業内容</th><td>経費削減コンサルティング／オフィス消耗品・ETC・燃料カードの共同購入／プリンターレンタル／節水器販売／異業種交流会の企画・運営／レンタルオフィス運営／Web・動画・印刷制作</td></tr>
-          <tr><th>電話</th><td><a href="tel:09019191515" style="color:var(--navy);font-weight:700">090-1919-1515</a>（代表）<br><a href="tel:0665713704" style="color:var(--navy);font-weight:700">06-6571-3704</a>（大阪本社）<br><a href="tel:0120513704" style="color:var(--navy);font-weight:700">0120-51-3704</a>（プリント放題）</td></tr>
-          <tr><th>メール</th><td><a href="mailto:info@tenplus.co.jp" style="color:var(--navy);font-weight:700">info@tenplus.co.jp</a></td></tr>
+          <tr><th>事業内容</th><td>テンプラス事業（経費削減）／起業プラス事業／交流会プラス事業／WEBプラス事業／印刷プラス事業／AEDプラス事業</td></tr>
+          <tr><th>電話</th><td><a href="tel:09019191515">090-1919-1515</a>（代表）<br><a href="tel:0665713704">06-6571-3704</a>（大阪本社）<br><a href="tel:0120513704">0120-51-3704</a>（プリント放題）</td></tr>
+          <tr><th>メール</th><td><a href="mailto:info@tenplus.co.jp">info@tenplus.co.jp</a></td></tr>
           <tr><th>受付時間</th><td>平日 9:00〜18:00</td></tr>
-          <tr><th>Web</th><td><a href="https://tenplus.co.jp/" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700">tenplus.co.jp</a>　／　<a href="https://kouryukai.tv/" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700">kouryukai.tv</a>（交流会）</td></tr>
+          <tr><th>Web</th><td><a href="https://tenplus.co.jp/" target="_blank" rel="noopener">tenplus.co.jp</a>　／　<a href="https://kouryukai.tv/" target="_blank" rel="noopener">kouryukai.tv</a>（交流会）</td></tr>
         </table>
       </div>
       <div class="reveal d1">
-        <p style="font-size:.8rem;letter-spacing:.14em;color:var(--soft);font-weight:700;margin-bottom:14px">全国5拠点</p>
+        <p style="font-size:.92rem;letter-spacing:.14em;color:var(--soft);font-weight:700;margin-bottom:14px">全国5拠点</p>
         <div class="offices">
-          <div class="office"><b>大阪本社</b><span>〒552-0021　大阪市港区築港3-8-2-2F</span></div>
+          <div class="office main"><b>大阪本社</b><span>〒552-0021　大阪市港区築港3-8-2-2F</span></div>
           <div class="office"><b>中部支社</b><span>〒460-0003　名古屋市中区錦1-16-14-2F</span></div>
           <div class="office"><b>四国支社</b><span>〒765-0051　香川県善通寺市上吉田町8-5-19</span></div>
           <div class="office soon"><b>熊本支社</b><span>開設準備中です。</span></div>
@@ -688,24 +768,22 @@ footer b{color:#cfdae5}
 </section>
 
 <footer>
-  <b>株式会社テンプラス</b>　｜　経費の削減から、売上・集客アップのお手伝いまで。<br>
-  掲載の価格・条件は2026年9月時点の目安です。最新の内容はお問い合わせください。<br>
-  <span style="opacity:.7">このページは制作サンプルです。制作: YoUdai_work</span>
+  <div class="flogo"><svg class="logo" viewBox="0 0 560 246" role="img" aria-label="TEN+"><use href="#tenplus-logo"/></svg><b>株式会社テンプラス</b></div>
+  経費の削減から、売上・集客アップのお手伝いまで。<br>
+  掲載の価格・条件は2026年10月時点の目安です。最新の内容はお問い合わせください。<br>
+  <span style="opacity:.75">サービス写真はイメージです。　このページは「ウェブのれん」で制作しています（制作：YoUday）。</span>
 </footer>
 
 <script>
-// intro
 addEventListener('load',()=>{
-  setTimeout(()=>{document.getElementById('intro').classList.add('hide');document.getElementById('hero').classList.add('play')},1300);
+  setTimeout(()=>{document.getElementById('intro').classList.add('hide');document.getElementById('hero').classList.add('play')},1200);
 });
-// progress + header
 addEventListener('scroll',()=>{
   const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
   document.getElementById('prog').style.width=sc+'%';
   document.getElementById('hd').classList.toggle('solid',h.scrollTop>40);
 });
-// reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
