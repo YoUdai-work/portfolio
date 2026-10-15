@@ -48,7 +48,15 @@ h2{font-size:.8rem;letter-spacing:.3em;color:var(--soft);text-transform:uppercas
 .lbtn.sub{background:var(--card);border:1px solid var(--line)}
 
 footer{border-top:1px solid var(--line);text-align:center;padding:28px 20px;font-size:.72rem;color:var(--soft)}
-@media(max-width:520px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.7rem}}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;text-align:center}
+.rcard .rn{font-weight:900;font-size:1rem;letter-spacing:.1em;display:block}
+.rcard b{display:block;font-size:1rem;margin:8px 0 6px}
+.rcard span{font-size:.83rem;color:var(--soft)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gcard{aspect-ratio:4/3;border:1.5px dashed var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--soft);font-size:.78rem;background:var(--card);padding:10px}
+.cta{max-width:460px;margin:0 auto 16px;text-align:center;color:#c6cbd9;font-size:.88rem}
+@media(max-width:520px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.7rem}.reasons{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -84,11 +92,34 @@ footer{border-top:1px solid var(--line);text-align:center;padding:28px 20px;font
 
 <section>
   <div class="wrap">
+    <h2>Why Me</h2>
+    <div class="reasons">
+      <div class="rcard"><span class="rn grad">01</span><b>数字で語れる</b><span>「かわいい」で終わらせず、CVR・継続率など成果で設計します。</span></div>
+      <div class="rcard"><span class="rn grad">02</span><b>戦略から一貫</b><span>ターゲット設計・ブランディングからLP・UIまで通しで担当。</span></div>
+      <div class="rcard"><span class="rn grad">03</span><b>伴走する速さ</b><span>Figmaで即共有・高速修正。意思決定を止めません。</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <h2>Selected Works</h2>
     <div class="works">
       <div class="wk"><span class="tag">LP DESIGN</span><h3>オンライン英会話スクールLP</h3><p>ターゲット再設計とファーストビュー刷新を担当。</p><div class="res grad">→ CVR 1.2% → 3.4%（2.8倍）</div></div>
       <div class="wk"><span class="tag">BRANDING</span><h3>コスメD2Cブランド立ち上げ</h3><p>ロゴ・パッケージ・ECデザインを一貫担当。</p><div class="res grad">→ 発売3ヶ月で月商800万円</div></div>
       <div class="wk"><span class="tag">UI/UX</span><h3>家計簿アプリUI改善</h3><p>オンボーディング改修を提案・実装。</p><div class="res grad">→ 継続率 +18pt</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <p class="cta">実際の制作では、担当したLP・UI・ロゴなどの制作画像がここに並びます。</p>
+    <div class="gallery">
+      <div class="gcard">LP・Webデザイン</div>
+      <div class="gcard">UI / アプリ画面</div>
+      <div class="gcard">ロゴ・ブランディング</div>
     </div>
   </div>
 </section>
@@ -106,6 +137,7 @@ footer{border-top:1px solid var(--line);text-align:center;padding:28px 20px;font
 <section>
   <div class="wrap">
     <h2>Contact</h2>
+    <p class="cta">お仕事のご相談・お見積りはお気軽に。まずは要件だけでも大丈夫です。</p>
     <div class="links">
       <a class="lbtn" href="#">ポートフォリオを見る</a>
       <a class="lbtn sub" href="#">X（作業ログ・Tips）</a>

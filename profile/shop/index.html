@@ -48,7 +48,15 @@ h2 span{display:inline-block;border-bottom:3px dotted var(--terra);padding-botto
 
 footer{background:var(--brown);color:#d8c7b4;text-align:center;padding:28px 20px;font-size:.74rem;line-height:1.9}
 footer b{color:#fff}
-@media(max-width:520px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.5rem}}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px;text-align:center}
+.rcard .rn{font-family:Inter;font-weight:800;color:var(--terra);font-size:1rem;letter-spacing:.1em;display:block}
+.rcard b{display:block;color:var(--brown);font-size:1rem;margin:8px 0 6px}
+.rcard span{font-size:.84rem;color:var(--soft)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gcard{aspect-ratio:4/3;border:1.5px dashed #e0d3c0;border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--soft);font-size:.78rem;background:var(--card);padding:10px}
+.cta{max-width:460px;margin:0 auto 16px;text-align:center;color:var(--brown);font-size:.9rem}
+@media(max-width:520px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.5rem}.reasons{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -88,6 +96,17 @@ footer b{color:#fff}
 
 <section>
   <div class="wrap">
+    <h2><span>選ばれる3つの理由</span></h2>
+    <div class="reasons">
+      <div class="rcard"><span class="rn">01</span><b>薪窯の一点もの</b><span>火のゆらぎが生む、その日だけの焼き上がり。</span></div>
+      <div class="rcard"><span class="rn">02</span><b>国産小麦×自家製酵母</b><span>36時間の低温長時間発酵で、粉本来の香りを引き出します。</span></div>
+      <div class="rcard"><span class="rn">03</span><b>1日180個の手仕事</b><span>売り切れごめん。数を追わず、一つひとつ丁寧に。</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <h2><span>あゆみ</span></h2>
     <div class="tl"><span class="y">2010</span><span>都内ホテルベーカリーで修業開始</span></div>
     <div class="tl"><span class="y">2014</span><span>移住。古民家を改装し薪窯を自作</span></div>
@@ -107,6 +126,18 @@ footer b{color:#fff}
 
 <section>
   <div class="wrap">
+    <h2><span>パンギャラリー</span></h2>
+    <p class="cta">実際の制作では、焼き上がりや店内のお写真がここに並びます。</p>
+    <div class="gallery">
+      <div class="gcard">看板の薪窯パン</div>
+      <div class="gcard">店内・薪窯の様子</div>
+      <div class="gcard">季節のパン</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <h2><span>店舗のご案内</span></h2>
     <div class="info">
       <dl>
@@ -121,6 +152,7 @@ footer b{color:#fff}
 <section>
   <div class="wrap">
     <h2><span>つながる</span></h2>
+    <p class="cta">焼き上がり情報はInstagramで。オンライン便は毎月1日から受付です。</p>
     <div class="links">
       <a class="lbtn" href="#">オンライン便を予約する</a>
       <a class="lbtn sub" href="#">Instagram（焼き上がり情報）</a>

@@ -50,7 +50,16 @@ h2::after{content:"";display:block;width:36px;height:2px;background:var(--gold);
 
 footer{background:var(--navy);color:#9fb2c2;text-align:center;padding:30px 20px;font-size:.75rem}
 footer b{color:#fff}
-@media(max-width:560px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.6rem}}
+.lead{max-width:600px;margin:0 auto 24px;text-align:center;font-size:.9rem;color:var(--soft)}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;text-align:center}
+.rcard .rn{font-family:Inter;font-weight:800;color:var(--gold);font-size:1rem;letter-spacing:.1em}
+.rcard b{display:block;color:var(--navy);font-size:1rem;margin:8px 0 6px}
+.rcard span{font-size:.84rem;color:var(--soft)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gcard{aspect-ratio:4/3;border:1.5px dashed #cfd6dd;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--soft);font-size:.78rem;background:#fbfcfd;padding:10px}
+.cta{max-width:520px;margin:0 auto 18px;text-align:center;color:var(--navy);font-size:.96rem;font-weight:500}
+@media(max-width:560px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.6rem}.reasons{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -93,6 +102,29 @@ footer b{color:#fff}
 
 <section>
   <div class="wrap">
+    <h2>選ばれる3つの理由</h2>
+    <div class="reasons">
+      <div class="rcard"><span class="rn">01</span><b>断らない対応力</b><span>他社が断る難形状・小ロットも、まず「どう作るか」から一緒に考えます。</span></div>
+      <div class="rcard"><span class="rn">02</span><b>±0.005mmの精度</b><span>5軸加工機と検査体制で、医療・産業機器の要求精度に応えます。</span></div>
+      <div class="rcard"><span class="rn">03</span><b>最短48時間の見積り</b><span>試作1個のご相談でも、スピードで意思決定を止めません。</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="wrap">
+    <h2>製品・現場ギャラリー</h2>
+    <p class="lead">実際の制作では、貴社の製品・工場・スタッフのお写真がここに入ります。</p>
+    <div class="gallery">
+      <div class="gcard">製品・加工事例の写真</div>
+      <div class="gcard">工場・設備の写真</div>
+      <div class="gcard">スタッフ・現場の写真</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <h2>お客様の声</h2>
     <div class="voice">「他社に断られた形状を、翌週には試作で持ってきてくれた。技術と速さの両立に驚いた。」<div class="who">— 医療機器メーカー 開発部様</div></div>
     <div class="voice">「図面の不備まで先回りして指摘してくれる。もはや外注ではなくパートナー。」<div class="who">— 産業機械メーカー 購買ご担当者様</div></div>
@@ -112,6 +144,7 @@ footer b{color:#fff}
 <section>
   <div class="wrap">
     <h2>お問い合わせ</h2>
+    <p class="cta">試作のご相談・お見積りは無料です。まずはお気軽にご連絡ください。</p>
     <div class="links">
       <a class="lbtn" href="#">会社サイトを見る</a>
       <a class="lbtn" href="#">お見積り・ご相談フォーム</a>
