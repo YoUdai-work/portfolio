@@ -15,7 +15,8 @@ a{color:inherit;text-decoration:none}
 .grad{background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
 
 .hero{padding:80px 0 50px;text-align:center}
-.avatar{width:104px;height:104px;border-radius:32px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:2rem;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;transform:rotate(-4deg)}
+.avatar{width:104px;height:104px;border-radius:32px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:2rem;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;transform:rotate(-4deg);overflow:hidden;padding:0}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .hero .en{font-size:.72rem;letter-spacing:.35em;color:var(--soft)}
 .hero h1{font-size:2.2rem;font-weight:900;letter-spacing:.04em;margin:8px 0 2px}
 .hero .role{color:var(--soft);font-size:.9rem}
@@ -65,7 +66,7 @@ footer{border-top:1px solid var(--line);text-align:center;padding:28px 20px;font
 <body>
 
 <div class="hero wrap">
-  <div class="avatar">KM</div>
+  <div class="avatar"><img src="../img-samples/av-fl.jpg" alt="如月 ミナ（架空の人物）"></div>
   <p class="en">Freelance Web Designer</p>
   <h1>KISARAGI <span class="grad">MINA</span></h1>
   <p class="role">如月 ミナ ／ UIデザイン・LP制作・ブランディング</p>
