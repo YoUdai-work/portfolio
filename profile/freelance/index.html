@@ -54,7 +54,10 @@ footer{border-top:1px solid var(--line);text-align:center;padding:28px 20px;font
 .rcard b{display:block;font-size:1rem;margin:8px 0 6px}
 .rcard span{font-size:.83rem;color:var(--soft)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.gcard{aspect-ratio:4/3;border:1.5px dashed var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--soft);font-size:.78rem;background:var(--card);padding:10px}
+.gcard{margin:0;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.gcard img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+@media(max-width:560px){.gallery .gcard:first-child{grid-column:1/-1}.gallery .gcard:first-child img{aspect-ratio:16/9}}
+.gcard figcaption{font-size:.78rem;padding:8px 10px;text-align:center;color:#555}
 .cta{max-width:460px;margin:0 auto 16px;text-align:center;color:#c6cbd9;font-size:.88rem}
 @media(max-width:520px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.7rem}.reasons{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
 </style>
@@ -115,12 +118,9 @@ footer{border-top:1px solid var(--line);text-align:center;padding:28px 20px;font
 <section>
   <div class="wrap">
     <h2>Gallery</h2>
-    <p class="cta">実際の制作では、担当したLP・UI・ロゴなどの制作画像がここに並びます。</p>
-    <div class="gallery">
-      <div class="gcard">LP・Webデザイン</div>
-      <div class="gcard">UI / アプリ画面</div>
-      <div class="gcard">ロゴ・ブランディング</div>
-    </div>
+    <p class="cta">最近の制作から。LP・Webサイト・広告バナー。</p>
+    <div class="gallery"><figure class="gcard"><img src="../img-samples/fl-1.jpg" alt="LPデザイン（美容サロン）" loading="lazy"><figcaption>LPデザイン（美容サロン）</figcaption></figure><figure class="gcard"><img src="../img-samples/fl-2.jpg" alt="WordPressサイト（ヘアサロン）" loading="lazy"><figcaption>WordPressサイト（ヘアサロン）</figcaption></figure><figure class="gcard"><img src="../img-samples/fl-3.jpg" alt="広告バナー" loading="lazy"><figcaption>広告バナー</figcaption></figure></div>
+  </div>
   </div>
 </section>
 

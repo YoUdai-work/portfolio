@@ -54,7 +54,10 @@ footer b{color:#fff}
 .rcard b{display:block;color:var(--brown);font-size:1rem;margin:8px 0 6px}
 .rcard span{font-size:.84rem;color:var(--soft)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.gcard{aspect-ratio:4/3;border:1.5px dashed #e0d3c0;border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--soft);font-size:.78rem;background:var(--card);padding:10px}
+.gcard{margin:0;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.gcard img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+@media(max-width:560px){.gallery .gcard:first-child{grid-column:1/-1}.gallery .gcard:first-child img{aspect-ratio:16/9}}
+.gcard figcaption{font-size:.78rem;padding:8px 10px;text-align:center;color:#555}
 .cta{max-width:460px;margin:0 auto 16px;text-align:center;color:var(--brown);font-size:.9rem}
 @media(max-width:520px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.5rem}.reasons{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
 </style>
@@ -127,12 +130,9 @@ footer b{color:#fff}
 <section>
   <div class="wrap">
     <h2><span>パンギャラリー</span></h2>
-    <p class="cta">実際の制作では、焼き上がりや店内のお写真がここに並びます。</p>
-    <div class="gallery">
-      <div class="gcard">看板の薪窯パン</div>
-      <div class="gcard">店内・薪窯の様子</div>
-      <div class="gcard">季節のパン</div>
-    </div>
+    <p class="cta">毎朝の焼き上がりと、薪窯のある店内。</p>
+    <div class="gallery"><figure class="gcard"><img src="../img-samples/shop-1.jpg" alt="看板の薪窯パン" loading="lazy"><figcaption>看板の薪窯パン</figcaption></figure><figure class="gcard"><img src="../img-samples/shop-2.jpg" alt="店内・薪窯の様子" loading="lazy"><figcaption>店内・薪窯の様子</figcaption></figure><figure class="gcard"><img src="../img-samples/shop-3.jpg" alt="季節のパン（秋）" loading="lazy"><figcaption>季節のパン（秋）</figcaption></figure></div>
+  </div>
   </div>
 </section>
 

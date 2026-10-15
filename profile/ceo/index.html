@@ -57,7 +57,10 @@ footer b{color:#fff}
 .rcard b{display:block;color:var(--navy);font-size:1rem;margin:8px 0 6px}
 .rcard span{font-size:.84rem;color:var(--soft)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.gcard{aspect-ratio:4/3;border:1.5px dashed #cfd6dd;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--soft);font-size:.78rem;background:#fbfcfd;padding:10px}
+.gcard{margin:0;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.gcard img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+@media(max-width:560px){.gallery .gcard:first-child{grid-column:1/-1}.gallery .gcard:first-child img{aspect-ratio:16/9}}
+.gcard figcaption{font-size:.78rem;padding:8px 10px;text-align:center;color:#555}
 .cta{max-width:520px;margin:0 auto 18px;text-align:center;color:var(--navy);font-size:.96rem;font-weight:500}
 @media(max-width:560px){.nums{grid-template-columns:1fr 1fr}.hero h1{font-size:1.6rem}.reasons{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
 </style>
@@ -114,12 +117,9 @@ footer b{color:#fff}
 <section style="background:#fff">
   <div class="wrap">
     <h2>製品・現場ギャラリー</h2>
-    <p class="lead">実際の制作では、貴社の製品・工場・スタッフのお写真がここに入ります。</p>
-    <div class="gallery">
-      <div class="gcard">製品・加工事例の写真</div>
-      <div class="gcard">工場・設備の写真</div>
-      <div class="gcard">スタッフ・現場の写真</div>
-    </div>
+    <p class="lead">精度を支える、製品・設備・職人の仕事。</p>
+    <div class="gallery"><figure class="gcard"><img src="../img-samples/ceo-1.jpg" alt="製品・加工事例" loading="lazy"><figcaption>製品・加工事例</figcaption></figure><figure class="gcard"><img src="../img-samples/ceo-2.jpg" alt="5軸加工機のある工場" loading="lazy"><figcaption>5軸加工機のある工場</figcaption></figure><figure class="gcard"><img src="../img-samples/ceo-3.jpg" alt="職人による検査" loading="lazy"><figcaption>職人による検査</figcaption></figure></div>
+  </div>
   </div>
 </section>
 
